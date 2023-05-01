@@ -12,6 +12,7 @@ const {sonarRules} = require('../rules/sonar');
 const {tailwindcssRules} = require('../rules/tailwindcss');
 const {typescriptRules, typescriptTypeCheckingRules} = require('../rules/typescript');
 const {unicornRules} = require('../rules/unicorn');
+const {graphqlRules} = require('../rules/graphql');
 
 module.exports = {
 	$schema: 'http://json.schemastore.org/eslintrc',
@@ -104,6 +105,14 @@ module.exports = {
 			],
 			rules: {
 				'import/no-default-export': 'off',
+			},
+		},
+		{
+			files: '*.graphql',
+			parser: '@graphql-eslint/eslint-plugin',
+			plugins: ['@graphql-eslint'],
+			rules: {
+				...graphqlRules,
 			},
 		},
 	],
