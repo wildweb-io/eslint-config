@@ -13,6 +13,7 @@ const {tailwindcssRules} = require('../rules/tailwindcss');
 const {typescriptRules, typescriptTypeCheckingRules} = require('../rules/typescript');
 const {unicornRules} = require('../rules/unicorn');
 const {graphqlRules} = require('../rules/graphql');
+const {jsonRules} = require('../rules/json');
 const {yamlRules} = require('../rules/yaml');
 
 module.exports = {
@@ -106,6 +107,14 @@ module.exports = {
 			],
 			rules: {
 				'import/no-default-export': 'off',
+			},
+		},
+		{
+			files: '*.json',
+			parser: 'jsonc-eslint-parser',
+			plugins: ['jsonc'],
+			rules: {
+				...jsonRules,
 			},
 		},
 		{
