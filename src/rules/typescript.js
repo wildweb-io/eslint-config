@@ -229,6 +229,8 @@ module.exports = {
 		'@typescript-eslint/typedef': [0],
 		'@typescript-eslint/unbound-method': [0],
 		'@typescript-eslint/unified-signatures': [2, {ignoreDifferentlyNamedParameters: true}],
+	},
+	typescriptTypeCheckingRules: {
 		'@typescript-eslint/await-thenable': [2],
 		'@typescript-eslint/no-floating-promises': [2, {ignoreVoid: true, ignoreIIFE: true}],
 		'@typescript-eslint/no-for-in-array': [0],

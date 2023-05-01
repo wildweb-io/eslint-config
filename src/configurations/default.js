@@ -10,7 +10,7 @@ const {regexRules} = require('../rules/regex');
 const {shopifyRules} = require('../rules/shopify');
 const {sonarRules} = require('../rules/sonar');
 const {tailwindcssRules} = require('../rules/tailwindcss');
-const {typescriptRules} = require('../rules/typescript');
+const {typescriptRules, typescriptTypeCheckingRules} = require('../rules/typescript');
 const {unicornRules} = require('../rules/unicorn');
 
 module.exports = {
@@ -121,6 +121,7 @@ module.exports = {
 		...sonarRules,
 		...tailwindcssRules,
 		...typescriptRules,
+		...typescriptTypeCheckingRules,
 		...unicornRules,
 	},
 };
