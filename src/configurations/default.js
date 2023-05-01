@@ -13,6 +13,7 @@ const {tailwindcssRules} = require('../rules/tailwindcss');
 const {typescriptRules, typescriptTypeCheckingRules} = require('../rules/typescript');
 const {unicornRules} = require('../rules/unicorn');
 const {graphqlRules} = require('../rules/graphql');
+const {yamlRules} = require('../rules/yaml');
 
 module.exports = {
 	$schema: 'http://json.schemastore.org/eslintrc',
@@ -105,6 +106,14 @@ module.exports = {
 			],
 			rules: {
 				'import/no-default-export': 'off',
+			},
+		},
+		{
+			files: '*.yaml',
+			parser: 'yaml-eslint-parser',
+			plugins: ['yml'],
+			rules: {
+				...yamlRules,
 			},
 		},
 		{
