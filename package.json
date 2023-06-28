@@ -1,6 +1,6 @@
 {
 	"name": "@wildweb/eslint-config",
-	"version": "0.0.4",
+	"version": "1.0.0",
 	"description": "ESLint shareable configs used at Wild Web",
 	"license": "MIT",
 	"main": "src/index.js",
