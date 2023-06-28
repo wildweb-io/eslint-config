@@ -141,7 +141,6 @@ module.exports = {
 		],
 		'indent-legacy': [0, 2, {SwitchCase: 1, MemberExpression: 1}],
 		'init-declarations': [0, 'always'],
-		'jsx-quotes': [2, 'prefer-single'],
 		'key-spacing': [0, {beforeColon: false, afterColon: true}],
 		'keyword-spacing': [0, {before: true, after: true, overrides: {}}],
 		'line-comment-position': [0, {position: 'above'}],
@@ -199,7 +198,7 @@ module.exports = {
 				max: 1,
 			},
 		],
-		'multiline-comment-style': [2, 'starred-block'],
+		'multiline-comment-style': [2, 'bare-block'],
 		'multiline-ternary': [0, 'always-multiline'],
 		'new-cap': [
 			1,
@@ -533,6 +532,10 @@ module.exports = {
 			{
 				selector: 'WithStatement',
 				message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+			},
+			{
+				selector: ':matches(ImportNamespaceSpecifier)',
+				message: 'Import/export only modules you need',
 			},
 		],
 		'no-return-assign': [2, 'always'],

@@ -1,5 +1,6 @@
 module.exports = {
 	reactRules: {
+		'jsx-quotes': [2, 'prefer-single'],
 		'react-hooks/exhaustive-deps': [1],
 		'react-hooks/rules-of-hooks': [2],
 		'react/boolean-prop-naming': [1, {validateNested: true, rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+'}],
