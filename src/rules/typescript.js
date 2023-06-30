@@ -70,7 +70,14 @@ module.exports = {
 		],
 		'@typescript-eslint/consistent-type-definitions': [2, 'type'],
 		'@typescript-eslint/consistent-type-exports': [2, {fixMixedExportsWithInlineTypeSpecifier: true}],
-		'@typescript-eslint/consistent-type-imports': [1],
+		'@typescript-eslint/consistent-type-imports': [
+			2,
+			{
+				prefer: 'type-imports',
+				fixStyle: 'separate-type-imports',
+				disallowTypeAnnotations: false,
+			},
+		],
 		'@typescript-eslint/default-param-last': [2],
 		'@typescript-eslint/dot-notation': [
 			2,
@@ -182,7 +189,10 @@ module.exports = {
 			2,
 			{allowShortCircuit: false, allowTernary: false, allowTaggedTemplates: false, enforceForJSX: false},
 		],
-		'@typescript-eslint/no-unused-vars': [2, {vars: 'all', args: 'after-used', ignoreRestSiblings: true}],
+		'@typescript-eslint/no-unused-vars': [
+			2,
+			{vars: 'all', args: 'after-used', ignoreRestSiblings: true, argsIgnorePattern: '^_', varsIgnorePattern: '^_'},
+		],
 		'@typescript-eslint/no-use-before-define': [2, {functions: true, classes: true, variables: true}],
 		'@typescript-eslint/no-useless-constructor': [2],
 		'@typescript-eslint/no-useless-empty-export': [2],

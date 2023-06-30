@@ -1,5 +1,6 @@
 module.exports = {
 	importRules: {
+		'import/consistent-type-specifier-style': [2, 'prefer-top-level'],
 		'import/default': [2],
 		'import/dynamic-import-chunkname': [
 			0,
