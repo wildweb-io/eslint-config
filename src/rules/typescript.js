@@ -166,10 +166,6 @@ module.exports = {
 		'@typescript-eslint/no-redeclare': [2],
 		'@typescript-eslint/no-redundant-type-constituents': [0],
 		'@typescript-eslint/no-require-imports': [2],
-		'@typescript-eslint/no-restricted-imports': [
-			2,
-			[2, 'domain', 'freelist', 'smalloc', 'punycode', 'sys', 'querystring', 'colors'],
-		],
 		'@typescript-eslint/no-shadow': [0],
 		'@typescript-eslint/no-this-alias': [2, {allowDestructuring: true}],
 		'@typescript-eslint/no-throw-literal': [2, {allowThrowingUnknown: true, allowThrowingAny: false}],
