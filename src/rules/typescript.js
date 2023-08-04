@@ -145,7 +145,6 @@ module.exports = {
 		],
 		'@typescript-eslint/no-floating-promises': [0],
 		'@typescript-eslint/no-for-in-array': [0],
-		'@typescript-eslint/no-implicit-any-catch': [2],
 		'@typescript-eslint/no-implied-eval': [0],
 		'@typescript-eslint/no-inferrable-types': [2, {ignoreParameters: false, ignoreProperties: false}],
 		'@typescript-eslint/no-invalid-void-type': [2],
