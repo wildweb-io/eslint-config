@@ -52,6 +52,13 @@ module.exports = {
 			version: 'detect',
 			pragma: 'React',
 		},
+		tailwindcss: {
+			callees: ['cn'],
+			config: 'tailwind.config.ts',
+		},
+		next: {
+			rootDir: true,
+		},
 		'import/resolver': {
 			typescript: {},
 			node: {
@@ -84,6 +91,8 @@ module.exports = {
 	],
 	extends: [
 		'eslint:recommended',
+		'plugin:react/jsx-runtime',
+		'plugin:react/recommended',
 		'plugin:promise/recommended',
 		'plugin:unicorn/recommended',
 		'plugin:sonarjs/recommended',
