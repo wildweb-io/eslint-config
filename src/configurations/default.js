@@ -50,6 +50,7 @@ module.exports = {
 		jsx: true,
 		requireConfigFile: false,
 	},
+	reportUnusedDisableDirectives: true,
 	settings: {
 		react: {
 			version: 'detect',
@@ -74,7 +75,13 @@ module.exports = {
 		propWrapperFunctions: ['forbidExtraProps', 'exact', 'Object.freeze'],
 		'import/core-modules': [],
 	},
-	ignorePatterns: ['**/node_modules/*', '**/out/*', '**/.next/*', '**/dist/*'],
+	ignorePatterns: [
+		'**/node_modules/*',
+		'**/out/*',
+		'**/.next/*',
+		'**/dist/*',
+		'!.*.js',
+	],
 	plugins: [
 		'@shopify',
 		'@typescript-eslint',
