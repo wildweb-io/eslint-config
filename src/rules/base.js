@@ -22,7 +22,15 @@ module.exports = {
 		'block-spacing': [0, 'always'],
 		'brace-style': [0, '1tbs', {allowSingleLine: true}],
 		'callback-return': [2, ['callback']],
-		camelcase: [2, {properties: 'never', ignoreDestructuring: false, ignoreImports: false, ignoreGlobals: true}],
+		camelcase: [
+			2,
+			{
+				properties: 'never',
+				ignoreDestructuring: false,
+				ignoreImports: false,
+				ignoreGlobals: true,
+			},
+		],
 		'capitalized-comments': [
 			0,
 			'never',
@@ -39,7 +47,10 @@ module.exports = {
 				},
 			},
 		],
-		'class-methods-use-this': [2, {exceptMethods: [], enforceForClassFields: true}],
+		'class-methods-use-this': [
+			2,
+			{exceptMethods: [], enforceForClassFields: true},
+		],
 		'comma-dangle': [
 			0,
 			{
@@ -78,7 +89,11 @@ module.exports = {
 		'flowtype/union-intersection-spacing': [0],
 		'for-direction': [2],
 		'func-call-spacing': [0, 'never'],
-		'func-name-matching': [2, 'never', {includeCommonJSModuleExports: false, considerPropertyDescriptor: true}],
+		'func-name-matching': [
+			2,
+			'never',
+			{includeCommonJSModuleExports: false, considerPropertyDescriptor: true},
+		],
 		'func-names': [1],
 		'func-style': [2, 'expression', {allowArrowFunctions: true}],
 		'function-call-argument-newline': [0, 'consistent'],
@@ -92,7 +107,15 @@ module.exports = {
 		'handle-callback-err': [0],
 		'id-blacklist': [0],
 		'id-denylist': [2, 'native'],
-		'id-length': [2, {min: 2, max: 30, properties: 'never', exceptions: ['_', 'i', 'j', 'k', 'x', 'y', 'z']}],
+		'id-length': [
+			2,
+			{
+				min: 2,
+				max: 30,
+				properties: 'never',
+				exceptions: ['_', 'i', 'j', 'k', 'x', 'y', 'z'],
+			},
+		],
 		'id-match': [0],
 		'implicit-arrow-linebreak': [0, 'beside'],
 		indent: [
@@ -412,7 +435,11 @@ module.exports = {
 		'no-octal-escape': [2],
 		'no-param-reassign': [
 			2,
-			{props: true, ignorePropertyModificationsFor: [], ignorePropertyModificationsForRegex: []},
+			{
+				props: true,
+				ignorePropertyModificationsFor: [],
+				ignorePropertyModificationsForRegex: [],
+			},
 		],
 		'no-path-concat': [2],
 		'no-plusplus': [2, {allowForLoopAfterthoughts: true}],
@@ -429,11 +456,13 @@ module.exports = {
 			0,
 			{
 				name: 'isFinite',
-				message: 'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+				message:
+					'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
 			},
 			{
 				name: 'isNaN',
-				message: 'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+				message:
+					'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
 			},
 			'addEventListener',
 			'blur',
@@ -527,11 +556,13 @@ module.exports = {
 			},
 			{
 				selector: 'LabeledStatement',
-				message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+				message:
+					'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
 			},
 			{
 				selector: 'WithStatement',
-				message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+				message:
+					'`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
 			},
 			{
 				selector: ':matches(ImportNamespaceSpecifier)',

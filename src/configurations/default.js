@@ -10,7 +10,10 @@ const {regexRules} = require('../rules/regex');
 const {shopifyRules} = require('../rules/shopify');
 const {sonarRules} = require('../rules/sonar');
 const {tailwindcssRules} = require('../rules/tailwindcss');
-const {typescriptRules, typescriptTypeCheckingRules} = require('../rules/typescript');
+const {
+	typescriptRules,
+	typescriptTypeCheckingRules,
+} = require('../rules/typescript');
 const {unicornRules} = require('../rules/unicorn');
 const {graphqlRules} = require('../rules/graphql');
 const {jsonRules} = require('../rules/json');

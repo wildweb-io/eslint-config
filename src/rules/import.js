@@ -45,7 +45,10 @@ module.exports = {
 			},
 		],
 		'import/newline-after-import': [2],
-		'import/no-absolute-path': [2, {esmodule: true, commonjs: true, amd: false}],
+		'import/no-absolute-path': [
+			2,
+			{esmodule: true, commonjs: true, amd: false},
+		],
 		'import/no-amd': [2],
 		'import/no-anonymous-default-export': [
 			2,

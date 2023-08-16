@@ -47,7 +47,15 @@ module.exports = {
 			{
 				labelAttributes: ['label'],
 				controlComponents: [],
-				ignoreElements: ['audio', 'canvas', 'embed', 'input', 'textarea', 'tr', 'video'],
+				ignoreElements: [
+					'audio',
+					'canvas',
+					'embed',
+					'input',
+					'textarea',
+					'tr',
+					'video',
+				],
 				ignoreRoles: [
 					'grid',
 					'listbox',
@@ -125,14 +133,37 @@ module.exports = {
 		'jsx-a11y/no-noninteractive-element-interactions': [
 			2,
 			{
-				handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
+				handlers: [
+					'onClick',
+					'onMouseDown',
+					'onMouseUp',
+					'onKeyPress',
+					'onKeyDown',
+					'onKeyUp',
+				],
 			},
 		],
 		'jsx-a11y/no-noninteractive-element-to-interactive-role': [
 			2,
 			{
-				ul: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
-				ol: ['listbox', 'menu', 'menubar', 'radiogroup', 'tablist', 'tree', 'treegrid'],
+				ul: [
+					'listbox',
+					'menu',
+					'menubar',
+					'radiogroup',
+					'tablist',
+					'tree',
+					'treegrid',
+				],
+				ol: [
+					'listbox',
+					'menu',
+					'menubar',
+					'radiogroup',
+					'tablist',
+					'tree',
+					'treegrid',
+				],
 				li: ['menuitem', 'option', 'row', 'tab', 'treeitem'],
 				table: ['grid'],
 				td: ['gridcell'],
@@ -150,7 +181,14 @@ module.exports = {
 		'jsx-a11y/no-static-element-interactions': [
 			0,
 			{
-				handlers: ['onClick', 'onMouseDown', 'onMouseUp', 'onKeyPress', 'onKeyDown', 'onKeyUp'],
+				handlers: [
+					'onClick',
+					'onMouseDown',
+					'onMouseUp',
+					'onKeyPress',
+					'onKeyDown',
+					'onKeyUp',
+				],
 			},
 		],
 		'jsx-a11y/role-has-required-aria-props': [2],

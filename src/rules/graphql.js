@@ -3,8 +3,17 @@ module.exports = {
 		'@graphql-eslint/alphabetize': [
 			2,
 			{
-				arguments: ['FieldDefinition', 'Field', 'DirectiveDefinition', 'Directive'],
-				fields: ['ObjectTypeDefinition', 'InterfaceTypeDefinition', 'InputObjectTypeDefinition'],
+				arguments: [
+					'FieldDefinition',
+					'Field',
+					'DirectiveDefinition',
+					'Directive',
+				],
+				fields: [
+					'ObjectTypeDefinition',
+					'InterfaceTypeDefinition',
+					'InputObjectTypeDefinition',
+				],
 				selections: ['OperationDefinition', 'FragmentDefinition'],
 				values: ['EnumTypeDefinition'],
 				variables: ['OperationDefinition'],
