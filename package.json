@@ -14,47 +14,39 @@
 		"src/*"
 	],
 	"dependencies": {
-		"@graphql-eslint/eslint-plugin": "^3.18.0",
-		"@next/eslint-plugin-next": "^13.3.2",
+		"@graphql-eslint/eslint-plugin": "^3.20.1",
+		"@next/eslint-plugin-next": "^13.4.15",
 		"@shopify/eslint-plugin": "^43.0.0",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
+		"@typescript-eslint/eslint-plugin": "^6.4.0",
+		"@typescript-eslint/parser": "^6.4.0",
 		"eslint-config-prettier": "^9.0.0",
-		"eslint-import-resolver-typescript": "^3.5.5",
+		"eslint-import-resolver-typescript": "^3.6.0",
 		"eslint-plugin-eslint-comments": "^3.2.0",
-		"eslint-plugin-import": "^2.27.5",
-		"eslint-plugin-jsonc": "^2.7.0",
+		"eslint-plugin-import": "^2.28.0",
+		"eslint-plugin-jsonc": "^2.9.0",
 		"eslint-plugin-jsx-a11y": "^6.7.1",
-		"eslint-plugin-n": "^16.0.0",
+		"eslint-plugin-n": "^16.0.1",
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-promise": "^6.1.1",
-		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react": "^7.33.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-regexp": "^1.14.0",
+		"eslint-plugin-regexp": "^1.15.0",
 		"eslint-plugin-sonarjs": "^0.20.0",
-		"eslint-plugin-tailwindcss": "^3.11.0",
-		"eslint-plugin-unicorn": "^48.0.0",
-		"eslint-plugin-yml": "^1.5.0",
-		"yaml-eslint-parser": "^1.2.0"
+		"eslint-plugin-tailwindcss": "^3.13.0",
+		"eslint-plugin-unicorn": "^48.0.1",
+		"eslint-plugin-yml": "^1.8.0",
+		"yaml-eslint-parser": "^1.2.2"
 	},
 	"devDependencies": {
-		"eslint": "^8.39.0",
+		"@wildweb/prettier-config": "^3.0.0",
+		"eslint": "^8.46.0",
 		"prettier": "^3.0.0"
 	},
 	"peerDependencies": {
-		"eslint": ">=8.39.0",
-		"prettier": ">=2.8.8"
+		"eslint": ">=8.46.0",
+		"prettier": ">=3.0.0"
 	},
-	"prettier": {
-		"arrowParens": "avoid",
-		"bracketSpacing": false,
-		"jsxSingleQuote": true,
-		"singleQuote": true,
-		"trailingComma": "all",
-		"useTabs": true,
-		"proseWrap": "always",
-		"printWidth": 120
-	},
+	"prettier": "@wildweb/prettier-config",
 	"repository": "https://github.com/wildweb-io/eslint-config",
 	"homepage": "https://github.com/wildweb-io/eslint-config#readme",
 	"bugs": {
