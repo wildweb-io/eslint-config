@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 module.exports = {
 	reactRules: {
 		'jsx-quotes': [2, 'prefer-single'],
@@ -122,7 +123,7 @@ module.exports = {
 			{
 				declaration: 'parens-new-line',
 				assignment: 'parens-new-line',
-				return: 'parens-new-line',
+				'return': 'parens-new-line',
 				arrow: 'parens-new-line',
 				condition: 'ignore',
 				logical: 'ignore',

@@ -1,7 +1,8 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 module.exports = {
 	typescriptRules: {
 		'@typescript-eslint/adjacent-overload-signatures': [2],
-		'@typescript-eslint/array-type': [2, {default: 'array-simple'}],
+		'@typescript-eslint/array-type': [2, {'default': 'array-simple'}],
 		'@typescript-eslint/await-thenable': [0],
 		'@typescript-eslint/ban-ts-comment': [
 			2,

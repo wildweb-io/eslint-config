@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable max-lines */
 module.exports = {
 	baseRules: {
 		'accessor-pairs': [
@@ -337,7 +339,7 @@ module.exports = {
 		'no-implicit-coercion': [
 			2,
 			{
-				boolean: false,
+				'boolean': false,
 				number: true,
 				string: true,
 				disallowTemplateShorthand: false,
