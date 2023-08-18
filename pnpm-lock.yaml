@@ -9,8 +9,8 @@ dependencies:
     specifier: ^3.20.1
     version: 3.20.1(@babel/core@7.22.10)(graphql@16.8.0)
   '@next/eslint-plugin-next':
-    specifier: ^13.4.16
-    version: 13.4.16
+    specifier: ^13.4.18
+    version: 13.4.18
   '@shopify/eslint-plugin':
     specifier: ^43.0.0
     version: 43.0.0(@babel/core@7.22.10)(eslint-import-resolver-typescript@3.6.0)(eslint@8.47.0)(prettier@3.0.2)(typescript@5.1.6)
@@ -710,8 +710,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@next/eslint-plugin-next@13.4.16:
-    resolution: {integrity: sha512-QuFtQl+oSEEQb0HMYBdvBoUaTiMxbY3go/MFkF3zOnfY0t84+IbAX78cw8ZCfr6cA6UcTq3nMIlCrHwDC/moxg==}
+  /@next/eslint-plugin-next@13.4.18:
+    resolution: {integrity: sha512-GlOmUjZYYTjKl782mKk5a0bYEmKaouGaxPhi6t9yDILqrppU7JTIyONzLKQPszRXDCVZge0NFd4gwRs1ARZsMg==}
     dependencies:
       glob: 7.1.7
     dev: false
