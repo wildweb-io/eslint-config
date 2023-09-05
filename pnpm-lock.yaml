@@ -74,8 +74,8 @@ dependencies:
 
 devDependencies:
   '@wildweb/prettier-config':
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^3.0.3
+    version: 3.0.3
   eslint:
     specifier: ^8.48.0
     version: 8.48.0
@@ -1066,8 +1066,9 @@ packages:
       tslib: 2.6.1
     dev: false
 
-  /@wildweb/prettier-config@3.0.0:
-    resolution: {integrity: sha512-CH+ToItm9sv3KF3/9KuVAC6hvdJ6o+aKfJM/2IDeZxE4h1a2TJZEmN1COjsdN1qeRfNYhYReVQyULSlP0RhF+g==}
+  /@wildweb/prettier-config@3.0.3:
+    resolution: {integrity: sha512-U96jyb9rcfocagN8yfh9Cfom/AxhVopZ7Fzv2oXiHOGlzWBeDgfHd7iEqhqXgSOLADN1QFHhxHtNBXDXqZ9Vdw==}
+    engines: {node: '>=10.0.0'}
     dependencies:
       prettier: 3.0.3
     dev: true
