@@ -66,8 +66,8 @@ dependencies:
     specifier: ^48.0.1
     version: 48.0.1(eslint@8.49.0)
   eslint-plugin-yml:
-    specifier: ^1.8.0
-    version: 1.8.0(eslint@8.49.0)
+    specifier: ^1.9.0
+    version: 1.9.0(eslint@8.49.0)
   yaml-eslint-parser:
     specifier: ^1.2.2
     version: 1.2.2
@@ -2163,8 +2163,8 @@ packages:
       strip-indent: 3.0.0
     dev: false
 
-  /eslint-plugin-yml@1.8.0(eslint@8.49.0):
-    resolution: {integrity: sha512-fgBiJvXD0P2IN7SARDJ2J7mx8t0bLdG6Zcig4ufOqW5hOvSiFxeUyc2g5I1uIm8AExbo26NNYCcTGZT0MXTsyg==}
+  /eslint-plugin-yml@1.9.0(eslint@8.49.0):
+    resolution: {integrity: sha512-ayuC57WyVQ5+QZ02y62GiB//5+zsiyzUGxUX/mrhLni+jfsKA4KoITjkbR65iUdjjhWpyTJHPcAIFLKQIOwgsw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=6.0.0'
