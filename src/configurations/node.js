@@ -53,6 +53,7 @@ module.exports = {
 		'import/core-modules': [],
 	},
 	ignorePatterns: [
+		'**/package.json',
 		'**/node_modules/*',
 		'**/out/*',
 		'**/.next/*',
