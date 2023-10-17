@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@graphql-eslint/eslint-plugin": "^3.20.1",
-    "@next/eslint-plugin-next": "^13.5.4",
+    "@next/eslint-plugin-next": "^13.5.5",
     "@shopify/eslint-plugin": "^43.0.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
