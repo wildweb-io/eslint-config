@@ -95,6 +95,7 @@ module.exports = {
 			2,
 			{
 				allow: [
+					'server-only',
 					'**/register',
 					'**/register.*',
 					'**/register /**',
