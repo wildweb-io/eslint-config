@@ -223,7 +223,7 @@ module.exports = {
 				max: 1,
 			},
 		],
-		'multiline-comment-style': [2, 'bare-block'],
+		'multiline-comment-style': [1, 'bare-block'],
 		'multiline-ternary': [0, 'always-multiline'],
 		'new-cap': [
 			1,
@@ -648,7 +648,7 @@ module.exports = {
 		'no-useless-return': [2],
 		'no-var': [0],
 		'no-void': [0, {allowAsStatement: true}],
-		'no-warning-comments': [2, {terms: ['fixme']}],
+		'no-warning-comments': [1, {terms: ['fixme', 'todo']}],
 		'no-whitespace-before-property': [0],
 		'no-with': [2],
 		'no-wrap-func': [0],
