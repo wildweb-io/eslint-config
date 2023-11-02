@@ -10,3 +10,4 @@ export * from './sort-keys';
 export * from './typescript';
 export * from './unicorn';
 export * from './yml';
+export {react} from './react';

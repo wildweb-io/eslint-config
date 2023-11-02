@@ -7,11 +7,13 @@ import {
 	jsonc,
 	markdown,
 	prettier,
+	react,
 	sortKeys,
 	typescript,
 	unicorn,
 	yml,
 } from './configs';
+import {hasReact} from './env';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const presetJavaScript = [
@@ -50,6 +52,10 @@ export const wildweb = (
 ): FlatESLintConfigItem[] => {
 	const configs = [];
 	configs.push(...basic);
+
+	if (hasReact) {
+		configs.push(...react);
+	}
 
 	if (enableSortKeys) {
 		configs.push(...sortKeys);

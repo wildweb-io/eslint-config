@@ -48,6 +48,15 @@ export * as pluginSortKeys from 'eslint-plugin-sort-keys';
 // @ts-expect-error missing types
 export * as pluginYml from 'eslint-plugin-yml';
 
+// @ts-expect-error missing types
+export * as reactPlugin from 'eslint-plugin-react';
+
+// @ts-expect-error missing types
+export * as reactHooksPlugin from 'eslint-plugin-react-hooks';
+
+// @ts-expect-error missing types
+export * as a11yPlugin from 'eslint-plugin-jsx-a11y';
+
 export * as parserJsonc from 'jsonc-eslint-parser';
 export * as pluginJsonc from 'eslint-plugin-jsonc';
 export * as parserYml from 'yaml-eslint-parser';
