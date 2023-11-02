@@ -1,12 +1,15 @@
+import {GLOB_HTML, GLOB_SRC, GLOB_STYLE} from '../globs';
 import {pluginTailwindcss} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const tailwindcss: FlatESLintConfigItem[] = [
 	{
+		files: [GLOB_SRC, GLOB_STYLE, GLOB_HTML],
 		settings: {
 			tailwindcss: {
-				callees: ['cn'],
+				callees: ['cn', 'classnames', 'clsx'],
 				config: 'tailwind.config.ts',
+				removeDuplicates: true,
 			},
 		},
 		plugins: {

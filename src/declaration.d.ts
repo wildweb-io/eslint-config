@@ -4,6 +4,7 @@ declare module 'eslint-plugin-eslint-comments';
 declare module 'eslint-plugin-i';
 declare module 'eslint-plugin-markdown';
 declare module 'eslint-plugin-n';
+declare module 'eslint-plugin-promise';
 declare module 'eslint-plugin-tailwindcss';
 declare module 'eslint-plugin-sort-keys';
 declare module 'eslint-plugin-unicorn';

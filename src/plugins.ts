@@ -21,6 +21,7 @@ import * as _parserYml from 'yaml-eslint-parser';
 import * as _parserTypeScript from '@typescript-eslint/parser';
 import * as _pluginNode from 'eslint-plugin-n';
 import * as _pluginTailwindcss from 'eslint-plugin-tailwindcss';
+import * as _pluginPromise from 'eslint-plugin-promise';
 
 const interopDefault = (mod: any): any => {
 	return mod.default || mod;
@@ -38,6 +39,7 @@ export const pluginTypeScript = interopDefault(_pluginTypeScript);
 export const pluginUnicorn = interopDefault(_pluginUnicorn);
 export const pluginUnusedImports = interopDefault(_pluginUnusedImports);
 export const pluginYml = interopDefault(_pluginYml);
+export const pluginPromise = interopDefault(_pluginPromise);
 export const pluginReactHooks = interopDefault(_reactHooksPlugin);
 export const pluginReact = interopDefault(_reactPlugin);
 export const pluginA11y = interopDefault(_a11yPlugin);

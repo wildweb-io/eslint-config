@@ -1,9 +1,11 @@
+import {GLOB_SRC} from '../globs';
 import {pluginNode} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const node: FlatESLintConfigItem[] = [
 	pluginNode.configs['flat/recommended'],
 	{
+		files: [GLOB_SRC],
 		rules: {
 			'n/no-missing-import': ['off'],
 			'n/file-extension-in-import': ['off'],
