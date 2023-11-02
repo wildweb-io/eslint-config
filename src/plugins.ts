@@ -23,3 +23,7 @@ export * as parserTypeScript from '@typescript-eslint/parser';
 
 // @ts-expect-error missing types
 export * as pluginUnusedImports from 'eslint-plugin-unused-imports';
+
+// @ts-expect-error missing types
+import * as _pluginComments from 'eslint-plugin-eslint-comments';
+export const pluginComments = interopDefault(_pluginComments);
