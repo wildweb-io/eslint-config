@@ -8,6 +8,7 @@ import {
 	prettier,
 	typescript,
 	unicorn,
+	yml,
 } from './configs';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
@@ -19,7 +20,7 @@ export const presetJavaScript = [
 	...unicorn,
 ];
 
-export const presetLangsExtensions = [...markdown, ...jsonc];
+export const presetLangsExtensions = [...markdown, ...yml, ...jsonc];
 
 export const basic = [
 	...presetJavaScript,

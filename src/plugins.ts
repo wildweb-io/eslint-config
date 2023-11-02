@@ -42,5 +42,9 @@ export const pluginUnicorn = interopDefault(_pluginUnicorn);
 import * as _pluginMarkdown from 'eslint-plugin-markdown';
 export const pluginMarkdown = interopDefault(_pluginMarkdown);
 
+// @ts-expect-error missing types
+export * as pluginYml from 'eslint-plugin-yml';
+
 export * as parserJsonc from 'jsonc-eslint-parser';
 export * as pluginJsonc from 'eslint-plugin-jsonc';
+export * as parserYml from 'yaml-eslint-parser';

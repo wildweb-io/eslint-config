@@ -7,3 +7,4 @@ export * from './markdown';
 export * from './prettier';
 export * from './typescript';
 export * from './unicorn';
+export * from './yml';
