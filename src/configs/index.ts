@@ -13,3 +13,4 @@ export {unicorn} from './unicorn';
 export {yml} from './yml';
 export {react} from './react';
 export {nextjs} from './nextjs';
+export {tailwindcss} from './tailwindcss';

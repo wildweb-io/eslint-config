@@ -11,11 +11,12 @@ import {
 	prettier,
 	react,
 	sortKeys,
+	tailwindcss,
 	typescript,
 	unicorn,
 	yml,
 } from './configs';
-import {hasNextjs, hasReact} from './env';
+import {hasNextjs, hasReact, hasTailwindcss} from './env';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const presetJavaScript = [
@@ -62,6 +63,10 @@ export const wildweb = (
 
 	if (hasNextjs) {
 		configs.push(...nextjs);
+	}
+
+	if (hasTailwindcss) {
+		configs.push(...tailwindcss);
 	}
 
 	if (enableSortKeys) {
