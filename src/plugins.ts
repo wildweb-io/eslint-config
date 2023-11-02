@@ -37,3 +37,6 @@ export * as pluginImport from 'eslint-plugin-i';
 // @ts-expect-error missing types
 import * as _pluginUnicorn from 'eslint-plugin-unicorn';
 export const pluginUnicorn = interopDefault(_pluginUnicorn);
+
+export * as parserJsonc from 'jsonc-eslint-parser';
+export * as pluginJsonc from 'eslint-plugin-jsonc';

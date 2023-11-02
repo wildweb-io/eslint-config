@@ -3,6 +3,7 @@ import {
 	ignores,
 	imports,
 	javascript,
+	jsonc,
 	prettier,
 	typescript,
 	unicorn,
@@ -17,7 +18,13 @@ export const presetJavaScript = [
 	...unicorn,
 ];
 
-export const basic = [...presetJavaScript, ...typescript];
+export const presetLangsExtensions = [...jsonc];
+
+export const basic = [
+	...presetJavaScript,
+	...typescript,
+	...presetLangsExtensions,
+];
 export {basic as presetBasic};
 
 export const all = [...basic, ...prettier];
