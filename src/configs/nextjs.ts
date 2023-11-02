@@ -43,4 +43,20 @@ export const nextjs: FlatESLintConfigItem[] = [
 			'@next/next/no-unwanted-polyfillio': ['warn'],
 		},
 	},
+	{
+		files: [
+			'**/app/**/page.{js,jsx,tsx}',
+			'**/app/**/layout.{js,jsx,tsx}',
+			'**/app/**/error.{js,jsx,tsx}',
+			'**/app/**/template.{js,jsx,tsx}',
+			'**/app/**/not-found.{js,jsx,tsx}',
+			'**/app/**/loading.{js,jsx,tsx}',
+			'**/app/**/robots.{js,jsx,tsx}',
+			'**/app/**/sitemap.{js,jsx,tsx}',
+			'**/pages/**/*.{js,jsx,tsx}',
+		],
+		rules: {
+			'import/no-default-export': 'off',
+		},
+	},
 ];

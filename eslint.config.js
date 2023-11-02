@@ -11,4 +11,11 @@ export default wildweb([
 	{
 		ignores: ['tsup.config.ts'],
 	},
+	{
+		files: ['src/**/*.ts'],
+		rules: {
+			'@typescript-eslint/no-unsafe-member-access': 'off',
+			'@typescript-eslint/no-unsafe-assignment': 'off',
+		},
+	},
 ]);

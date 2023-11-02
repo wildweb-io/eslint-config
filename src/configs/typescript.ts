@@ -209,7 +209,7 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/no-loss-of-precision': ['error'],
 			'no-magic-numbers': ['off'],
 			'@typescript-eslint/no-magic-numbers': [
-				'warn',
+				'off',
 				{
 					ignore: [],
 					ignoreArrayIndexes: true,
@@ -351,6 +351,42 @@ export const typescript: FlatESLintConfigItem[] = [
 					markers: ['/'],
 				},
 			],
+		},
+	},
+	{
+		files: [GLOB_TS, GLOB_TSX],
+		rules: {
+			'@typescript-eslint/await-thenable': ['error'],
+			'@typescript-eslint/no-floating-promises': [
+				'error',
+				{ignoreVoid: true, ignoreIIFE: true},
+			],
+			'@typescript-eslint/no-for-in-array': ['off'],
+			'no-implied-eval': ['off'],
+			'@typescript-eslint/no-implied-eval': ['error'],
+			'@typescript-eslint/no-misused-promises': [
+				'error',
+				{
+					checksVoidReturn: {
+						arguments: false,
+						attributes: false,
+					},
+				},
+			],
+			'@typescript-eslint/no-unnecessary-type-assertion': ['error'],
+			'@typescript-eslint/no-unsafe-argument': ['error'],
+			'@typescript-eslint/no-unsafe-assignment': ['warn'],
+			'@typescript-eslint/no-unsafe-call': ['warn'],
+			'@typescript-eslint/no-unsafe-member-access': ['warn'],
+			'@typescript-eslint/no-unsafe-return': ['warn'],
+			'require-await': ['off'],
+			'@typescript-eslint/require-await': ['error'],
+			'@typescript-eslint/restrict-plus-operands': ['error'],
+			'@typescript-eslint/restrict-template-expressions': [
+				'warn',
+				{allowNumber: true},
+			],
+			'@typescript-eslint/unbound-method': ['error'],
 		},
 	},
 	{

@@ -85,7 +85,6 @@ export const wildweb = (
 		configs.push(...prettier);
 	}
 
-	// eslint-disable-next-line @typescript-eslint/no-magic-numbers
 	if (Object.keys(config).length > 0) {
 		configs.push(...(Array.isArray(config) ? config : [config]));
 	}
