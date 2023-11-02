@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
 import globals from 'globals';
-import {a11yPlugin, reactHooksPlugin, reactPlugin} from '../plugins';
+import {pluginA11y, pluginReact, pluginReactHooks} from '../plugins';
 import {GLOB_REACT} from '../globs';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
@@ -8,12 +8,12 @@ export const react: FlatESLintConfigItem[] = [
 	{
 		files: [GLOB_REACT],
 		plugins: {
-			react: reactPlugin,
-			'react-hooks': reactHooksPlugin,
-			'jsx-a11y': a11yPlugin,
+			react: pluginReact,
+			'react-hooks': pluginReactHooks,
+			'jsx-a11y': pluginA11y,
 		},
 		languageOptions: {
-			...reactPlugin.configs.recommended.languageOptions,
+			...pluginReact.configs.recommended.languageOptions,
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
@@ -24,9 +24,9 @@ export const react: FlatESLintConfigItem[] = [
 			},
 		},
 		rules: {
-			...reactPlugin.configs.all.rules,
-			...reactHooksPlugin.configs.recommended.rules,
-			...a11yPlugin.configs.recommended.rules,
+			...pluginReact.configs.all.rules,
+			...pluginReactHooks.configs.recommended.rules,
+			...pluginA11y.configs.recommended.rules,
 			'jsx-quotes': ['error', 'prefer-single'],
 			'react-hooks/exhaustive-deps': ['warn'],
 			'react-hooks/rules-of-hooks': ['error'],

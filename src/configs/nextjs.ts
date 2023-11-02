@@ -1,12 +1,12 @@
 import {GLOB_REACT} from '../globs';
-import {nextjsPlugin} from '../plugins';
+import {pluginNextjs} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const nextjs: FlatESLintConfigItem[] = [
 	{
 		files: [GLOB_REACT],
 		plugins: {
-			'@next/next': nextjsPlugin,
+			'@next/next': pluginNextjs,
 		},
 		settings: {
 			react: {
