@@ -6,4 +6,8 @@ require('sucrase/register');
 /** @type {typeof import('./src/index.ts')} */
 const {wildweb} = require('./src/index.ts');
 
-export default wildweb([]);
+export default wildweb([
+	{
+		ignores: ['tsup.config.ts'],
+	},
+]);

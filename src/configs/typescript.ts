@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+import {cwd} from 'node:process';
 import {GLOB_TS, GLOB_TSX} from '../globs';
 import {parserTypeScript, pluginAntfu, pluginTypeScript} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
@@ -9,6 +11,9 @@ export const typescript: FlatESLintConfigItem[] = [
 			parser: parserTypeScript,
 			parserOptions: {
 				sourceType: 'module',
+				ion: 'latest',
+				project: ['./**/tsconfig.json'],
+				tsconfigRootDir: cwd(),
 			},
 		},
 		settings: {
@@ -295,6 +300,55 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/unified-signatures': [
 				'error',
 				{ignoreDifferentlyNamedParameters: true},
+			],
+		},
+	},
+	{
+		files: [GLOB_TS, GLOB_TSX],
+		rules: {
+			'brace-style': 'off',
+			'comma-dangle': 'off',
+			'comma-spacing': 'off',
+			'default-param-last': 'off',
+			'dot-notation': 'off',
+			'func-call-spacing': 'off',
+			indent: 'off',
+			'keyword-spacing': 'off',
+			'no-array-constructor': 'off',
+			'no-dupe-class-members': 'off',
+			'no-duplicate-imports': 'off',
+			'no-empty-function': 'off',
+			'no-extra-parens': 'off',
+			'no-extra-semi': 'off',
+			'no-implied-eval': 'off',
+			'no-invalid-this': 'off',
+			'no-loop-func': 'off',
+			'no-loss-of-precision': 'off',
+			'no-redeclare': 'off',
+			'no-restricted-imports': 'off',
+			'no-return-await': 'off',
+			'no-shadow': 'off',
+			'no-throw-literal': 'off',
+			// https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+			'no-undef': 'off',
+			'no-unused-expressions': 'off',
+			'no-unused-vars': 'off',
+			'no-use-before-define': 'off',
+			'no-useless-constructor': 'off',
+			'object-curly-spacing': 'off',
+			'padding-line-between-statements': 'off',
+			quotes: 'off',
+			'require-await': 'off',
+			semi: 'off',
+			'space-before-function-paren': 'off',
+			'space-infix-ops': 'off',
+			// Adds support for triple-slash directives.
+			'spaced-comment': [
+				'error',
+				'always',
+				{
+					markers: ['/'],
+				},
 			],
 		},
 	},

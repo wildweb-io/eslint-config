@@ -18,6 +18,11 @@ export const nextjs: FlatESLintConfigItem[] = [
 			},
 		},
 		rules: {
+			'jsx-a11y/anchor-is-valid': ['off'],
+			'@next/next/link-passhref': ['error'],
+			'@next/next/no-script-in-document': ['error'],
+			'@next/next/no-script-in-head': ['error'],
+			'@next/next/no-server-import-in-page': ['error'],
 			'@next/next/google-font-display': ['warn'],
 			'@next/next/google-font-preconnect': ['warn'],
 			'@next/next/inline-script-id': ['error'],
