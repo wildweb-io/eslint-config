@@ -2,6 +2,7 @@
 import {cwd} from 'node:process';
 import {GLOB_TS, GLOB_TSX} from '../globs';
 import {parserTypeScript, pluginAntfu, pluginTypeScript} from '../plugins';
+import {paddingLines} from '../lib/padding-lines';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const typescript: FlatESLintConfigItem[] = [
@@ -267,7 +268,7 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/object-curly-spacing': ['off', 'never'],
 			'@typescript-eslint/padding-line-between-statements': [
 				'error',
-				{blankLine: 'always', prev: 'multiline-block-like', next: '*'},
+				...paddingLines,
 			],
 			'@typescript-eslint/parameter-properties': [
 				'error',

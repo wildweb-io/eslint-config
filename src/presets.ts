@@ -55,6 +55,7 @@ export const wildweb = (
 	}> = {},
 ): FlatESLintConfigItem[] => {
 	const configs = [];
+
 	configs.push(...basic);
 
 	if (hasReact) {

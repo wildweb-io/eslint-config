@@ -2,6 +2,7 @@
 import globals from 'globals';
 import {pluginUnusedImports} from '../plugins';
 import {isInEditor} from '../env';
+import {paddingLines} from '../lib/padding-lines';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 const MAX_COMPLEXITY = 20;
@@ -731,19 +732,7 @@ export const javascript: FlatESLintConfigItem[] = [
 					allowSingleLineBlocks: true,
 				},
 			],
-			'padding-line-between-statements': [
-				'off',
-				{
-					blankLine: 'always',
-					prev: 'directive',
-					next: '*',
-				},
-				{
-					blankLine: 'any',
-					prev: 'directive',
-					next: 'directive',
-				},
-			],
+			'padding-line-between-statements': ['error', ...paddingLines],
 			'prefer-destructuring': [
 				'off',
 				{
