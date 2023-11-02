@@ -1,17 +1,19 @@
 {
   "name": "@wildweb/eslint-config",
   "version": "3.0.0",
+  "packageManager": "pnpm@8.10.0",
   "description": "ESLint shareable configs used at Wild Web",
   "type": "module",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
   "license": "MIT",
-  "packageManager": "pnpm@8.10.0",
-  "scripts": {
-    "build": "tsup",
-    "lint": "eslint .",
-    "lint:fix": "pnpm run lint --fix",
-    "release": "bumpp && pnpm publish",
-    "prepublishOnly": "pnpm run build"
+  "homepage": "https://github.com/wildweb-io/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/wildweb-io/eslint-config/issues"
   },
+  "repository": "https://github.com/wildweb-io/eslint-config",
   "files": [
     "dist"
   ],
@@ -25,8 +27,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "engines": {
-    "node": ">=16.14.0"
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^6.9.1",
@@ -55,17 +64,8 @@
     "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   },
-  "peerDependencies": {
-    "eslint": "^8.0.0"
+  "engines": {
+    "node": ">=16.14.0"
   },
-  "prettier": "@wildweb/prettier-config",
-  "repository": "https://github.com/wildweb-io/eslint-config",
-  "homepage": "https://github.com/wildweb-io/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/wildweb-io/eslint-config/issues"
-  },
-  "keywords": [
-    "eslint",
-    "eslintconfig"
-  ]
+  "prettier": "@wildweb/prettier-config"
 }
