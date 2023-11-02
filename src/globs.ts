@@ -61,6 +61,7 @@ export const GLOB_EXCLUDE = [
 	'**/.idea',
 	'**/.output',
 	'**/.vite-inspect',
+	'**/next-env.d.ts',
 
 	'**/CHANGELOG*.md',
 	'**/*.min.*',

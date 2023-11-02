@@ -24,7 +24,7 @@ export const unicorn: FlatESLintConfigItem[] = [
 			'unicorn/import-style': 'error',
 			'unicorn/new-for-builtins': 'error',
 			'unicorn/no-abusive-eslint-disable': 'error',
-			'unicorn/no-array-callback-reference': 'error',
+			'unicorn/no-array-callback-reference': 'off',
 			'unicorn/no-array-for-each': 'warn',
 			'unicorn/no-array-method-this-argument': 'error',
 			'unicorn/no-array-push-push': 'error',

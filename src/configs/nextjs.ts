@@ -51,8 +51,8 @@ export const nextjs: FlatESLintConfigItem[] = [
 			'**/app/**/template.{js,jsx,tsx}',
 			'**/app/**/not-found.{js,jsx,tsx}',
 			'**/app/**/loading.{js,jsx,tsx}',
-			'**/app/**/robots.{js,jsx,tsx}',
-			'**/app/**/sitemap.{js,jsx,tsx}',
+			'**/app/**/robots.{js,jsx,ts,tsx}',
+			'**/app/**/sitemap.{js,jsx,ts,tsx}',
 			'**/pages/**/*.{js,jsx,tsx}',
 		],
 		rules: {
