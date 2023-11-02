@@ -1,3 +1,6 @@
+/* eslint-disable import/newline-after-import */
+/* eslint-disable import/order */
+/* eslint-disable import/first */
 /* eslint-disable func-style */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -27,3 +30,6 @@ export * as pluginUnusedImports from 'eslint-plugin-unused-imports';
 // @ts-expect-error missing types
 import * as _pluginComments from 'eslint-plugin-eslint-comments';
 export const pluginComments = interopDefault(_pluginComments);
+
+// @ts-expect-error missing types
+export * as pluginImport from 'eslint-plugin-i';
