@@ -1,5 +1,6 @@
 import {
 	comments,
+	graphql,
 	ignores,
 	imports,
 	javascript,
@@ -21,7 +22,12 @@ export const presetJavaScript = [
 	...unicorn,
 ];
 
-export const presetLangsExtensions = [...markdown, ...yml, ...jsonc];
+export const presetLangsExtensions = [
+	...markdown,
+	...yml,
+	...jsonc,
+	...graphql,
+];
 
 export const basic = [
 	...presetJavaScript,

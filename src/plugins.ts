@@ -51,3 +51,5 @@ export * as pluginYml from 'eslint-plugin-yml';
 export * as parserJsonc from 'jsonc-eslint-parser';
 export * as pluginJsonc from 'eslint-plugin-jsonc';
 export * as parserYml from 'yaml-eslint-parser';
+
+export * as graphqlESLint from '@graphql-eslint/eslint-plugin';

@@ -20,6 +20,7 @@ export const GLOB_MARKDOWN = '**/*.md';
 export const GLOB_VUE = '**/*.vue';
 export const GLOB_YAML = '**/*.y?(a)ml';
 export const GLOB_HTML = '**/*.htm?(l)';
+export const GLOB_GRAPHQL = '**/*.g?(raph)ql';
 
 export const GLOB_ALL_SRC = [
 	GLOB_SRC,
@@ -30,6 +31,7 @@ export const GLOB_ALL_SRC = [
 	GLOB_VUE,
 	GLOB_YAML,
 	GLOB_HTML,
+	GLOB_GRAPHQL,
 ];
 
 export const GLOB_NODE_MODULES = '**/node_modules' as const;
