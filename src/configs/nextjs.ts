@@ -1,10 +1,10 @@
-import {GLOB_REACT} from '../globs';
+import {GLOB_SRC} from '../globs';
 import {pluginNextjs} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const nextjs: FlatESLintConfigItem[] = [
 	{
-		files: [GLOB_REACT],
+		files: [GLOB_SRC],
 		plugins: {
 			'@next/next': pluginNextjs,
 		},
@@ -18,6 +18,8 @@ export const nextjs: FlatESLintConfigItem[] = [
 			},
 		},
 		rules: {
+			...pluginNextjs.configs.recommended.rules,
+			...pluginNextjs.configs['core-web-vitals'].rules,
 			'jsx-a11y/anchor-is-valid': ['off'],
 			'@next/next/link-passhref': ['error'],
 			'@next/next/no-script-in-document': ['error'],
