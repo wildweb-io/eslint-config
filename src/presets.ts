@@ -6,6 +6,7 @@ import {
 	jsonc,
 	markdown,
 	prettier,
+	sortKeys,
 	typescript,
 	unicorn,
 	yml,
@@ -29,19 +30,24 @@ export const basic = [
 ];
 export {basic as presetBasic};
 
-export const all = [...basic, ...prettier];
+export const all = [...basic, ...sortKeys, ...prettier];
 
 export const wildweb = (
 	config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
 	{
 		prettier: enablePrettier = true,
+		sortKeys: enableSortKeys = true,
 	}: Partial<{
 		prettier: boolean;
-		markdown: boolean;
+		sortKeys: boolean;
 	}> = {},
 ): FlatESLintConfigItem[] => {
 	const configs = [];
 	configs.push(...basic);
+
+	if (enableSortKeys) {
+		configs.push(...sortKeys);
+	}
 
 	if (enablePrettier) {
 		configs.push(...prettier);

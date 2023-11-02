@@ -43,6 +43,9 @@ import * as _pluginMarkdown from 'eslint-plugin-markdown';
 export const pluginMarkdown = interopDefault(_pluginMarkdown);
 
 // @ts-expect-error missing types
+export * as pluginSortKeys from 'eslint-plugin-sort-keys';
+
+// @ts-expect-error missing types
 export * as pluginYml from 'eslint-plugin-yml';
 
 export * as parserJsonc from 'jsonc-eslint-parser';
