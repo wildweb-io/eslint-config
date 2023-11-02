@@ -198,6 +198,7 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/no-invalid-void-type': ['error'],
 			'@typescript-eslint/no-loop-func': ['error'],
 			'@typescript-eslint/no-loss-of-precision': ['error'],
+			'no-magic-numbers': ['off'],
 			'@typescript-eslint/no-magic-numbers': [
 				'warn',
 				{

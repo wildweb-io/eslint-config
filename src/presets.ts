@@ -8,14 +8,14 @@ export {basic as presetBasic};
 
 export const all = [...basic, ...prettier];
 
-export function wildweb(
+export const wildweb = (
 	config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],
 	{
 		prettier: enablePrettier = true,
 	}: Partial<{
 		prettier: boolean;
 	}> = {},
-): FlatESLintConfigItem[] {
+): FlatESLintConfigItem[] => {
 	const configs = [];
 	configs.push(...basic);
 
@@ -29,4 +29,4 @@ export function wildweb(
 	}
 
 	return configs;
-}
+};

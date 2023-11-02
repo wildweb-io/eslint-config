@@ -1,7 +1,9 @@
+/* eslint-disable func-style */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* #__NO_SIDE_EFFECTS__ */
-function interopDefault(m: any) {
-	return m.default || m;
+function interopDefault(mod: any) {
+	return mod.default || mod;
 }
 
 import * as _pluginPrettier from 'eslint-plugin-prettier';
