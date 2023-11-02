@@ -1,7 +1,7 @@
-import {ignores, prettier, typescript} from './configs';
+import {ignores, javascript, prettier, typescript} from './configs';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
-export const presetJavaScript = [...ignores];
+export const presetJavaScript = [...ignores, ...javascript];
 
 export const basic = [...presetJavaScript, ...typescript];
 export {basic as presetBasic};

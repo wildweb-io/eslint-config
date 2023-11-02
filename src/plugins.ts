@@ -18,3 +18,6 @@ import * as _pluginAntfu from 'eslint-plugin-antfu';
 export const pluginAntfu = interopDefault(_pluginAntfu);
 
 export * as parserTypeScript from '@typescript-eslint/parser';
+
+// @ts-expect-error missing types
+export * as pluginUnusedImports from 'eslint-plugin-unused-imports';
