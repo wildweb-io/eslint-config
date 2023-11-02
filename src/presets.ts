@@ -4,6 +4,7 @@ import {
 	imports,
 	javascript,
 	jsonc,
+	markdown,
 	prettier,
 	typescript,
 	unicorn,
@@ -18,7 +19,7 @@ export const presetJavaScript = [
 	...unicorn,
 ];
 
-export const presetLangsExtensions = [...jsonc];
+export const presetLangsExtensions = [...markdown, ...jsonc];
 
 export const basic = [
 	...presetJavaScript,
@@ -35,6 +36,7 @@ export const wildweb = (
 		prettier: enablePrettier = true,
 	}: Partial<{
 		prettier: boolean;
+		markdown: boolean;
 	}> = {},
 ): FlatESLintConfigItem[] => {
 	const configs = [];
