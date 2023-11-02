@@ -12,44 +12,30 @@ npm i -D @wildweb/eslint-config
 
 ## Setup
 
-1. Add a `.eslintrc.js` file to your project
+## Usage
 
 ```js
+// eslint.config.js
+export {all as default} from '@wildweb/eslint-config'
+```
+
+### Custom Config
+
+```js
+import { wildweb } from '@wildweb/eslint-config'
+
+export default wildweb(
+  [
+    /* your custom config */
+  ],
+  {  prettier: true, sortKeys: true }
+)
+```
+
+### VSCode
+
+```jsonc
 {
-	"extends": "@wildweb/eslint-config",
-	"settings": {
-		"tailwindcss": {
-			"config": "tailwind.config.cjs"
-		}
-	}
+  "eslint.experimental.useFlatConfig": true
 }
-```
-
-2. Enable auto-fix in vscode: update settings.json
-
-```json
-{
-	"typescript.tsdk": "./node_modules/typescript/lib",
-	"typescript.preferences.importModuleSpecifier": "non-relative",
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"editor.codeActionsOnSave": [
-		"source.addMissingImports",
-		"source.fixAll.eslint"
-	]
-}
-```
-
-Ignore paths: update .eslintignore
-
-```
-**/node_modules/*
-**/out/*
-**/.next/*
-
-pnpm-lock.yaml
-next-env.d.ts
-
-*.mjs
-*.cjs
 ```

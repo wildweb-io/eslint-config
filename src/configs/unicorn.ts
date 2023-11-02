@@ -40,7 +40,7 @@ export const unicorn: FlatESLintConfigItem[] = [
 			'unicorn/no-lonely-if': 'error',
 			'unicorn/no-new-array': 'error',
 			'unicorn/no-new-buffer': 'error',
-			'unicorn/no-null': 'warn',
+			'unicorn/no-null': 'off',
 			'unicorn/no-object-as-default-parameter': 'error',
 			'unicorn/no-process-exit': 'error',
 			'unicorn/no-static-only-class': 'error',

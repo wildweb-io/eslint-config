@@ -42,7 +42,14 @@ export const basic = [
 ];
 export {basic as presetBasic};
 
-export const all = [...basic, ...sortKeys, ...prettier];
+export const all = [
+	...basic,
+	...(hasReact ? react : []),
+	...(hasNextjs ? nextjs : []),
+	...(hasTailwindcss ? tailwindcss : []),
+	...sortKeys,
+	...prettier,
+];
 
 export const wildweb = (
 	config: FlatESLintConfigItem | FlatESLintConfigItem[] = [],

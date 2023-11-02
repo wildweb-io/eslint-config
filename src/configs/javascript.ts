@@ -629,7 +629,7 @@ export const javascript: FlatESLintConfigItem[] = [
 				},
 			],
 			'no-undef-init': ['error'],
-			'no-undefined': ['error'],
+			'no-undefined': ['off'],
 			'no-underscore-dangle': [
 				'off',
 				{
