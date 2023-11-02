@@ -4,3 +4,4 @@ export * from './imports';
 export * from './javascript';
 export * from './prettier';
 export * from './typescript';
+export * from './unicorn';

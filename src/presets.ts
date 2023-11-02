@@ -5,6 +5,7 @@ import {
 	javascript,
 	prettier,
 	typescript,
+	unicorn,
 } from './configs';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
@@ -13,6 +14,7 @@ export const presetJavaScript = [
 	...javascript,
 	...comments,
 	...imports,
+	...unicorn,
 ];
 
 export const basic = [...presetJavaScript, ...typescript];

@@ -33,3 +33,7 @@ export const pluginComments = interopDefault(_pluginComments);
 
 // @ts-expect-error missing types
 export * as pluginImport from 'eslint-plugin-i';
+
+// @ts-expect-error missing types
+import * as _pluginUnicorn from 'eslint-plugin-unicorn';
+export const pluginUnicorn = interopDefault(_pluginUnicorn);
