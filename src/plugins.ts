@@ -57,6 +57,9 @@ export * as reactHooksPlugin from 'eslint-plugin-react-hooks';
 // @ts-expect-error missing types
 export * as a11yPlugin from 'eslint-plugin-jsx-a11y';
 
+// @ts-expect-error missing types
+export * as nextjsPlugin from '@next/eslint-plugin-next';
+
 export * as parserJsonc from 'jsonc-eslint-parser';
 export * as pluginJsonc from 'eslint-plugin-jsonc';
 export * as parserYml from 'yaml-eslint-parser';
