@@ -1,53 +1,50 @@
 {
   "name": "@wildweb/eslint-config",
-  "version": "2.6.0",
+  "version": "3.0.0",
   "description": "ESLint shareable configs used at Wild Web",
+  "type": "module",
   "license": "MIT",
-  "main": "src/index.js",
+  "packageManager": "pnpm@8.10.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "build": "tsup",
+    "lint": "eslint .",
+    "lint:fix": "pnpm run lint --fix",
+    "release": "bumpp && pnpm publish",
+    "prepublishOnly": "pnpm run build"
   },
   "files": [
-    "README.md",
-    "LICENSE",
-    "src/**/*",
-    "src/*"
+    "dist"
   ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
-    "node": ">=16.6.0"
+    "node": ">=16.14.0"
   },
   "dependencies": {
-    "@graphql-eslint/eslint-plugin": "^3.20.1",
-    "@next/eslint-plugin-next": "^13.5.6",
-    "@shopify/eslint-plugin": "^43.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-jsonc": "^2.10.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-n": "^16.2.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-regexp": "^2.1.1",
-    "eslint-plugin-sonarjs": "^0.21.0",
-    "eslint-plugin-tailwindcss": "^3.13.0",
-    "eslint-plugin-unicorn": "^48.0.1",
-    "eslint-plugin-yml": "^1.10.0",
-    "yaml-eslint-parser": "^1.2.2"
+		"eslint-define-config": "^1.24.1",
+		"globals": "^13.23.0",
+    "local-pkg": "^0.5.0",
+		"prettier": "^3.0.3"
   },
   "devDependencies": {
     "@wildweb/prettier-config": "^3.0.3",
     "eslint": "^8.52.0",
-    "prettier": "^3.0.3"
+    "@types/node": "^20.8.9",
+    "bumpp": "^9.2.0",
+    "sucrase": "^3.34.0",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "eslint": ">=8.46.0",
-    "prettier": ">=3.0.0"
+    "eslint": "^8.0.0"
   },
   "prettier": "@wildweb/prettier-config",
   "repository": "https://github.com/wildweb-io/eslint-config",
