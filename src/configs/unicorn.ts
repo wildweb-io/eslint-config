@@ -103,6 +103,17 @@ export const unicorn: FlatESLintConfigItem[] = [
 			'unicorn/template-indent': ['warn', {indent: '\t'}],
 			'unicorn/text-encoding-identifier-case': 'error',
 			'unicorn/throw-new-error': 'error',
+			'unicorn/string-content': [
+				'error',
+				{
+					patterns: {
+						'(?!(?=.*(0.0.0.0|127.0.0.1|localhost|www.w3.org)))^http:': {
+							message: 'Please use `https` for better security.`.',
+							suggest: 'https:',
+						},
+					},
+				},
+			],
 		},
 	},
 ];
