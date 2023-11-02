@@ -19,6 +19,7 @@ import * as _nextjsPlugin from '@next/eslint-plugin-next';
 import * as _parserJsonc from 'jsonc-eslint-parser';
 import * as _parserYml from 'yaml-eslint-parser';
 import * as _parserTypeScript from '@typescript-eslint/parser';
+import * as _pluginNode from 'eslint-plugin-n';
 
 const interopDefault = (mod: any): any => {
 	return mod.default || mod;
@@ -41,6 +42,7 @@ export const reactPlugin = interopDefault(_reactPlugin);
 export const a11yPlugin = interopDefault(_a11yPlugin);
 export const graphqlESLint = interopDefault(_graphqlESLint);
 export const nextjsPlugin = interopDefault(_nextjsPlugin);
+export const pluginNode = interopDefault(_pluginNode);
 export const parserJsonc = interopDefault(_parserJsonc);
 export const parserYml = interopDefault(_parserYml);
 export const parserTypeScript = interopDefault(_parserTypeScript);

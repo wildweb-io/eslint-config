@@ -7,6 +7,7 @@ import {
 	jsonc,
 	markdown,
 	nextjs,
+	node,
 	prettier,
 	react,
 	sortKeys,
@@ -20,6 +21,7 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 export const presetJavaScript = [
 	...ignores,
 	...javascript,
+	...node,
 	...comments,
 	...imports,
 	...unicorn,

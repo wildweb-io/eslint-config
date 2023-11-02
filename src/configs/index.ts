@@ -5,6 +5,7 @@ export {imports} from './imports';
 export {javascript} from './javascript';
 export {jsonc} from './jsonc';
 export {markdown} from './markdown';
+export {node} from './node';
 export {prettier} from './prettier';
 export {sortKeys} from './sort-keys';
 export {typescript} from './typescript';

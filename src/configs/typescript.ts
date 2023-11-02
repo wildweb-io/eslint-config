@@ -11,6 +11,9 @@ export const typescript: FlatESLintConfigItem[] = [
 				sourceType: 'module',
 			},
 		},
+		settings: {
+			reportUnusedDisableDirectives: true,
+		},
 		plugins: {
 			'@typescript-eslint': pluginTypeScript,
 			antfu: pluginAntfu,
