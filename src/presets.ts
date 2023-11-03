@@ -11,6 +11,7 @@ import {
 	prettier,
 	react,
 	sortKeys,
+	stylistic,
 	tailwindcss,
 	typescript,
 	unicorn,
@@ -30,6 +31,7 @@ export const basic = [
 	...yml,
 	...jsonc,
 	...graphql,
+	...stylistic,
 ];
 
 export const all = [
@@ -64,17 +66,29 @@ export const wildweb = (
 
 	configs.push(...basic);
 
-	if (enableTypescript) configs.push(...typescript);
+	if (enableTypescript) {
+		configs.push(...typescript);
+	}
 
-	if (enableReact) configs.push(...react);
+	if (enableReact) {
+		configs.push(...react);
+	}
 
-	if (enableNextjs) configs.push(...nextjs);
+	if (enableNextjs) {
+		configs.push(...nextjs);
+	}
 
-	if (enableTailwindcss) configs.push(...tailwindcss);
+	if (enableTailwindcss) {
+		configs.push(...tailwindcss);
+	}
 
-	if (enableSortKeys) configs.push(...sortKeys);
+	if (enableSortKeys) {
+		configs.push(...sortKeys);
+	}
 
-	if (enablePrettier) configs.push(...prettier);
+	if (enablePrettier) {
+		configs.push(...prettier);
+	}
 
 	// User can optionally pass a flat config item to the first argument
 	if (Object.keys(config).length > 0) {

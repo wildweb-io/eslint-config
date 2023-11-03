@@ -14,3 +14,4 @@ export {yml} from './yml';
 export {react} from './react';
 export {nextjs} from './nextjs';
 export {tailwindcss} from './tailwindcss';
+export {stylistic} from './stylistic';

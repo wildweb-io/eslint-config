@@ -50,21 +50,28 @@ export const javascript: FlatESLintConfigItem[] = [
 					setWithoutGet: true,
 				},
 			],
+			// deprecated -> moved to stylistic
 			'array-bracket-newline': ['off', 'consistent'],
+			// deprecated -> moved to stylistic
 			'array-bracket-spacing': ['off', 'never'],
 			'array-callback-return': [
 				'error',
 				{allowImplicit: true, checkForEach: false},
 			],
-			'array-element-newline': ['error', {minItems: 3, multiline: true}],
+			// deprecated -> moved to stylistic
+			'array-element-newline': ['off', {minItems: 3, multiline: true}],
 			'arrow-body-style': ['error', 'as-needed'],
+			// deprecated -> moved to stylistic
 			'arrow-parens': ['off', 'always'],
+			// deprecated -> moved to stylistic
 			'arrow-spacing': ['off', {after: true, before: true}],
 			'block-scoped-var': ['error'],
+			// deprecated -> moved to stylistic
 			'block-spacing': ['off', 'always'],
+			// deprecated -> moved to stylistic
 			'brace-style': ['off', '1tbs', {allowSingleLine: true}],
 			'callback-return': ['error', ['callback']],
-			camelcase: [
+			'camelcase': [
 				'error',
 				{
 					ignoreDestructuring: false,
@@ -93,6 +100,7 @@ export const javascript: FlatESLintConfigItem[] = [
 				'error',
 				{enforceForClassFields: true, exceptMethods: []},
 			],
+			// deprecated -> moved to stylistic
 			'comma-dangle': [
 				'off',
 				{
@@ -103,33 +111,45 @@ export const javascript: FlatESLintConfigItem[] = [
 					objects: 'always-multiline',
 				},
 			],
+			// deprecated -> moved to stylistic
 			'comma-spacing': ['off', {after: true, before: false}],
+			// deprecated -> moved to stylistic
 			'comma-style': ['off', 'last'],
-			complexity: ['error', MAX_COMPLEXITY],
+			'complexity': ['error', MAX_COMPLEXITY],
+			// deprecated -> moved to stylistic
 			'computed-property-spacing': ['off', 'never'],
 			'consistent-return': ['off'],
 			'consistent-this': ['off', 'that'],
 			'constructor-super': ['error'],
-			curly: ['off', 'all'],
+			'curly': ['off', 'all'],
 			'default-case': ['error', {commentPattern: '(?:)'}],
 			'default-case-last': ['error'],
 			'default-param-last': ['off'],
-			'dot-location': ['error', 'property'],
+			// deprecated -> moved to stylistic
+			'dot-location': ['off', 'property'],
 			'dot-notation': ['warn', {allowKeywords: true, allowPattern: ''}],
-			'eol-last': ['error', 'always'],
-			eqeqeq: ['error', 'smart'],
+			// deprecated -> moved to stylistic
+			'eol-last': ['off', 'always'],
+			'eqeqeq': ['error', 'smart'],
 			'for-direction': ['error'],
+			// deprecated -> moved to stylistic
 			'func-call-spacing': ['off', 'never'],
 			'func-name-matching': [
 				'error',
 				'never',
-				{considerPropertyDescriptor: true, includeCommonJSModuleExports: false},
+				{
+					considerPropertyDescriptor: true,
+					includeCommonJSModuleExports: false,
+				},
 			],
 			'func-names': ['warn'],
 			'func-style': ['error', 'expression', {allowArrowFunctions: true}],
+			// deprecated -> moved to stylistic
 			'function-call-argument-newline': ['off', 'consistent'],
+			// deprecated -> moved to stylistic
 			'function-paren-newline': ['off', 'consistent'],
 			'generator-star': ['off'],
+			// deprecated -> moved to stylistic
 			'generator-star-spacing': ['off', 'after'],
 			'getter-return': ['error', {allowImplicit: true}],
 			'global-require': ['off'],
@@ -148,8 +168,10 @@ export const javascript: FlatESLintConfigItem[] = [
 				},
 			],
 			'id-match': ['off'],
+			// deprecated -> moved to stylistic
 			'implicit-arrow-linebreak': ['off', 'beside'],
-			indent: [
+			// deprecated -> moved to stylistic
+			'indent': [
 				'off',
 				DEFAULT_IDENTATION,
 				{
@@ -199,10 +221,14 @@ export const javascript: FlatESLintConfigItem[] = [
 				{MemberExpression: 1, SwitchCase: 1},
 			],
 			'init-declarations': ['off', 'always'],
+			// deprecated -> moved to stylistic
 			'key-spacing': ['off', {afterColon: true, beforeColon: false}],
+			// deprecated -> moved to stylistic
 			'keyword-spacing': ['off', {after: true, before: true, overrides: {}}],
 			'line-comment-position': ['off', {position: 'above'}],
+			// deprecated -> moved to stylistic
 			'linebreak-style': ['off', 'unix'],
+			// deprecated -> moved to stylistic
 			'lines-around-comment': [
 				'off',
 				{
@@ -215,6 +241,7 @@ export const javascript: FlatESLintConfigItem[] = [
 				},
 			],
 			'lines-around-directive': ['error', {after: 'always', before: 'always'}],
+			// deprecated -> moved to stylistic
 			'lines-between-class-members': [
 				'off',
 				'always',
@@ -222,6 +249,7 @@ export const javascript: FlatESLintConfigItem[] = [
 			],
 			'max-classes-per-file': ['off', MAX_CLASSES_PER_FILE],
 			'max-depth': ['error', MAX_DEPTH],
+			// deprecated -> moved to stylistic
 			'max-len': [
 				'error',
 				MAX_LENGTH,
@@ -254,8 +282,10 @@ export const javascript: FlatESLintConfigItem[] = [
 			'max-nested-callbacks': ['error', MAX_NESTED_CALLBACKS],
 			'max-params': ['error', MAX_PARAMS],
 			'max-statements': ['error', MAX_STATEMENTS],
+			// deprecated -> moved to stylistic
 			'max-statements-per-line': ['error', {max: 1}],
 			'multiline-comment-style': ['warn', 'bare-block'],
+			// deprecated -> moved to stylistic
 			'multiline-ternary': ['off', 'always-multiline'],
 			'new-cap': [
 				'warn',
@@ -265,9 +295,11 @@ export const javascript: FlatESLintConfigItem[] = [
 					properties: true,
 				},
 			],
+			// deprecated -> moved to stylistic
 			'new-parens': ['error'],
 			'newline-after-var': ['off'],
 			'newline-before-return': ['off'],
+			// deprecated -> moved to stylistic
 			'newline-per-chained-call': ['off', {ignoreChainWithDepth: 3}],
 			'no-alert': 'warn',
 			'no-array-constructor': ['error'],
@@ -283,6 +315,7 @@ export const javascript: FlatESLintConfigItem[] = [
 			'no-comma-dangle': ['off'],
 			'no-compare-neg-zero': ['error'],
 			'no-cond-assign': ['error', 'always'],
+			// deprecated -> moved to stylistic
 			'no-confusing-arrow': [
 				'off',
 				{allowParens: true, onlyOneSimpleParam: false},
@@ -335,7 +368,7 @@ export const javascript: FlatESLintConfigItem[] = [
 				'error',
 				{
 					allow: [],
-					'boolean': false,
+					boolean: false,
 					disallowTemplateShorthand: false,
 					number: true,
 					string: true,
@@ -730,15 +763,15 @@ export const javascript: FlatESLintConfigItem[] = [
 			'prefer-spread': ['error'],
 			'prefer-template': ['error'],
 			'quote-props': ['error', 'as-needed', {keywords: true}],
-			quotes: ['error', 'single', 'avoid-escape'],
-			radix: ['error'],
+			'quotes': ['error', 'single', 'avoid-escape'],
+			'radix': ['error'],
 			'require-atomic-updates': ['error', {allowProperties: true}],
 			'require-await': ['error'],
 			'require-jsdoc': ['off'],
 			'require-unicode-regexp': ['off'],
 			'require-yield': ['error'],
 			'rest-spread-spacing': ['error', 'never'],
-			semi: ['error', 'always'],
+			'semi': ['error', 'always'],
 			'semi-spacing': [
 				'error',
 				{
@@ -798,7 +831,7 @@ export const javascript: FlatESLintConfigItem[] = [
 					markers: ['='],
 				},
 			],
-			strict: ['error', 'global'],
+			'strict': ['error', 'global'],
 			'switch-colon-spacing': [
 				'off',
 				{
@@ -836,7 +869,7 @@ export const javascript: FlatESLintConfigItem[] = [
 					before: false,
 				},
 			],
-			yoda: [
+			'yoda': [
 				'error',
 				'never',
 				{

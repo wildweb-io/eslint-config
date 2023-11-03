@@ -22,6 +22,7 @@ import * as _parserTypeScript from '@typescript-eslint/parser';
 import * as _pluginNode from 'eslint-plugin-n';
 import * as _pluginTailwindcss from 'eslint-plugin-tailwindcss';
 import * as _pluginPromise from 'eslint-plugin-promise';
+import * as _pluginStylistic from '@stylistic/eslint-plugin';
 
 const interopDefault = (mod: any): any => {
 	return mod.default || mod;
@@ -50,3 +51,4 @@ export const parserJsonc = interopDefault(_parserJsonc);
 export const parserYml = interopDefault(_parserYml);
 export const parserTypeScript = interopDefault(_parserTypeScript);
 export const pluginTailwindcss = interopDefault(_pluginTailwindcss);
+export const pluginStylistic = interopDefault(_pluginStylistic);

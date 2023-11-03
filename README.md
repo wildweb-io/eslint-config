@@ -16,20 +16,20 @@ npm i -D @wildweb/eslint-config
 
 ```js
 // eslint.config.js
-export {all as default} from '@wildweb/eslint-config'
+export {all as default} from '@wildweb/eslint-config';
 ```
 
 ### Custom Config
 
 ```js
-import { wildweb } from '@wildweb/eslint-config'
+import {wildweb} from '@wildweb/eslint-config';
 
 export default wildweb(
-  [
-    /* your custom config */
-  ],
-  {  prettier: true, sortKeys: true }
-)
+		[
+		/* your custom config */
+		],
+		{prettier: true, sortKeys: true},
+);
 ```
 
 ### VSCode

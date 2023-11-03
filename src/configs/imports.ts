@@ -80,7 +80,7 @@ export const imports: FlatESLintConfigItem[] = [
 			'import/order': [
 				'error',
 				{
-					groups: [
+					'groups': [
 						'builtin',
 						'external',
 						'internal',
@@ -91,8 +91,8 @@ export const imports: FlatESLintConfigItem[] = [
 						'type',
 					],
 					'newlines-between': 'never',
-					pathGroups: [{group: 'internal', pattern: '{{@,~}/,#}**'}],
-					pathGroupsExcludedImportTypes: ['type'],
+					'pathGroups': [{group: 'internal', pattern: '{{@,~}/,#}**'}],
+					'pathGroupsExcludedImportTypes': ['type'],
 				},
 			],
 		},

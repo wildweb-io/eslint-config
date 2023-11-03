@@ -8,7 +8,7 @@ export const typescript: FlatESLintConfigItem[] = [
 	{
 		plugins: {
 			'@typescript-eslint': pluginTypeScript,
-			antfu: pluginAntfu,
+			'antfu': pluginAntfu,
 		},
 	},
 	{
@@ -43,12 +43,12 @@ export const typescript: FlatESLintConfigItem[] = [
 			...pluginTypeScript.configs['eslint-recommended'].overrides?.[0].rules,
 			...pluginTypeScript.configs.strict.rules,
 			'@typescript-eslint/adjacent-overload-signatures': ['error'],
-			'@typescript-eslint/array-type': ['error', {'default': 'array-simple'}],
+			'@typescript-eslint/array-type': ['error', {default: 'array-simple'}],
 			'@typescript-eslint/await-thenable': ['off'],
 			'@typescript-eslint/ban-ts-comment': [
 				'error',
 				{
-					minimumDescriptionLength: 4,
+					'minimumDescriptionLength': 4,
 					'ts-expect-error': 'allow-with-description',
 				},
 			],
@@ -58,30 +58,30 @@ export const typescript: FlatESLintConfigItem[] = [
 				{
 					extendDefaults: false,
 					types: {
-						BigInt: {
+						'BigInt': {
 							fixWith: 'bigint',
 							message: 'Use `bigint` instead.',
 						},
-						Boolean: {
+						'Boolean': {
 							fixWith: 'boolean',
 							message: 'Use `boolean` instead.',
 						},
-						Function:
+						'Function':
 							'Use a specific function type instead, like `() => void`.',
-						Number: {
+						'Number': {
 							fixWith: 'number',
 							message: 'Use `number` instead.',
 						},
-						Object: {
+						'Object': {
 							fixWith: 'Record<string, unknown>',
 							message:
 								'The `Object` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead. See https://github.com/typescript-eslint/typescript-eslint/pull/848',
 						},
-						String: {
+						'String': {
 							fixWith: 'string',
 							message: 'Use `string` instead.',
 						},
-						Symbol: {
+						'Symbol': {
 							fixWith: 'symbol',
 							message: 'Use `symbol` instead.',
 						},
@@ -91,7 +91,7 @@ export const typescript: FlatESLintConfigItem[] = [
 						'[[]]':
 							"Don't use `[[]]`. It only allows an array with a single element which is an empty array. Use `SomeType[][]` instead.",
 						'[]': "Don't use the empty array type `[]`. It only allows empty arrays. Use `SomeType[]` instead.",
-						object: {
+						'object': {
 							fixWith: 'Record<string, unknown>',
 							message:
 								'The `object` type is hard to use. Use `Record<string, unknown>` instead. See: https://github.com/typescript-eslint/typescript-eslint/pull/848',

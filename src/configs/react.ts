@@ -8,7 +8,7 @@ export const react: FlatESLintConfigItem[] = [
 	{
 		plugins: {
 			'jsx-a11y': pluginA11y,
-			react: pluginReact,
+			'react': pluginReact,
 			'react-hooks': pluginReactHooks,
 		},
 	},
@@ -33,11 +33,11 @@ export const react: FlatESLintConfigItem[] = [
 			'jsx-a11y/alt-text': [
 				'warn',
 				{
-					area: [],
-					elements: ['img', 'object', 'area', 'input[type="image"]'],
-					img: [],
+					'area': [],
+					'elements': ['img', 'object', 'area', 'input[type="image"]'],
+					'img': [],
 					'input[type="image"]': [],
-					object: [],
+					'object': [],
 				},
 			],
 			'jsx-a11y/anchor-has-content': ['warn', {components: []}],
@@ -192,7 +192,8 @@ export const react: FlatESLintConfigItem[] = [
 			'jsx-a11y/role-supports-aria-props': ['warn'],
 			'jsx-a11y/scope': ['warn'],
 			'jsx-a11y/tabindex-no-positive': ['warn'],
-			'jsx-quotes': ['error', 'prefer-single'],
+			// deprecated -> moved to stylistic
+			'jsx-quotes': ['off', 'prefer-single'],
 			'react-hooks/exhaustive-deps': ['warn'],
 			'react-hooks/rules-of-hooks': ['error'],
 			'react/boolean-prop-naming': [
@@ -327,7 +328,7 @@ export const react: FlatESLintConfigItem[] = [
 					declaration: 'parens-new-line',
 					logical: 'ignore',
 					prop: 'ignore',
-					'return': 'parens-new-line',
+					return: 'parens-new-line',
 				},
 			],
 			'react/no-access-state-in-setstate': ['error'],
