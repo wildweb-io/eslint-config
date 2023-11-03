@@ -10,13 +10,6 @@ export const tailwindcss: FlatESLintConfigItem[] = [
 	},
 	{
 		files: [GLOB_SRC, GLOB_HTML],
-		settings: {
-			tailwindcss: {
-				callees: ['cn', 'classnames', 'clsx'],
-				config: 'tailwind.config.ts',
-				removeDuplicates: true,
-			},
-		},
 		rules: {
 			'tailwindcss/classnames-order': ['warn'],
 			'tailwindcss/enforces-negative-arbitrary-values': ['warn'],
@@ -25,6 +18,13 @@ export const tailwindcss: FlatESLintConfigItem[] = [
 			'tailwindcss/no-arbitrary-value': ['off'],
 			'tailwindcss/no-contradicting-classname': ['error'],
 			'tailwindcss/no-custom-classname': ['warn'],
+		},
+		settings: {
+			tailwindcss: {
+				callees: ['cn', 'classnames', 'clsx'],
+				config: 'tailwind.config.ts',
+				removeDuplicates: true,
+			},
 		},
 	},
 ];

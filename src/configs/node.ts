@@ -12,10 +12,12 @@ export const node: FlatESLintConfigItem[] = [
 	{
 		files: [GLOB_SRC],
 		rules: {
-			'n/no-missing-import': ['off'],
 			'n/file-extension-in-import': ['off'],
+			'n/handle-callback-err': ['error', '^(err|error)$'],
 			'n/no-deprecated-api': ['error'],
-			'n/no-mixed-requires': ['error', {grouping: true, allowCall: true}],
+			'n/no-exports-assign': 'error',
+			'n/no-missing-import': ['off'],
+			'n/no-mixed-requires': ['error', {allowCall: true, grouping: true}],
 			'n/no-new-require': ['error'],
 			'n/no-path-concat': ['error'],
 			'n/no-unpublished-bin': ['error'],
@@ -29,8 +31,6 @@ export const node: FlatESLintConfigItem[] = [
 			'n/prefer-promises/dns': ['error'],
 			'n/prefer-promises/fs': ['error'],
 			'n/process-exit-as-throw': ['error'],
-			'n/handle-callback-err': ['error', '^(err|error)$'],
-			'n/no-exports-assign': 'error',
 		},
 	},
 ];

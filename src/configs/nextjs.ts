@@ -10,19 +10,9 @@ export const nextjs: FlatESLintConfigItem[] = [
 	},
 	{
 		files: [GLOB_SRC],
-		settings: {
-			react: {
-				version: 'detect',
-				pragma: 'React',
-			},
-			next: {
-				rootDir: true,
-			},
-		},
 		rules: {
 			...pluginNextjs.configs.recommended.rules,
 			...pluginNextjs.configs['core-web-vitals'].rules,
-			'jsx-a11y/anchor-is-valid': ['off'],
 			'@next/next/google-font-display': ['warn'],
 			'@next/next/google-font-preconnect': ['warn'],
 			'@next/next/inline-script-id': ['error'],
@@ -43,6 +33,16 @@ export const nextjs: FlatESLintConfigItem[] = [
 			'@next/next/no-title-in-document-head': ['warn'],
 			'@next/next/no-typos': ['warn'],
 			'@next/next/no-unwanted-polyfillio': ['warn'],
+			'jsx-a11y/anchor-is-valid': ['off'],
+		},
+		settings: {
+			next: {
+				rootDir: true,
+			},
+			react: {
+				pragma: 'React',
+				version: 'detect',
+			},
 		},
 	},
 	{

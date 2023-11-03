@@ -103,10 +103,6 @@ export const unicorn: FlatESLintConfigItem[] = [
 			'unicorn/relative-url-style': 'error',
 			'unicorn/require-array-join-separator': 'error',
 			'unicorn/require-number-to-fixed-digits-argument': 'error',
-			'unicorn/switch-case-braces': 'error',
-			'unicorn/template-indent': ['warn', {indent: '\t'}],
-			'unicorn/text-encoding-identifier-case': 'error',
-			'unicorn/throw-new-error': 'error',
 			'unicorn/string-content': [
 				'error',
 				{
@@ -118,6 +114,10 @@ export const unicorn: FlatESLintConfigItem[] = [
 					},
 				},
 			],
+			'unicorn/switch-case-braces': 'error',
+			'unicorn/template-indent': ['warn', {indent: '\t'}],
+			'unicorn/text-encoding-identifier-case': 'error',
+			'unicorn/throw-new-error': 'error',
 		},
 	},
 ];

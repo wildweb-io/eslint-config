@@ -121,17 +121,21 @@ export const imports: FlatESLintConfigItem[] = [
 	},
 	{
 		files: [GLOB_JS, GLOB_JSX],
-		settings: {
-			'import/extensions': ['.js', '.jsx'],
-		},
 		languageOptions: {
 			parserOptions: {
 				ecmaFeatures: {jsx: true},
 			},
 		},
+		settings: {
+			'import/extensions': ['.js', '.jsx'],
+		},
 	},
 	{
 		files: [GLOB_TS, GLOB_TSX],
+		rules: {
+			// TypeScript compilation already ensures that named imports exist in the referenced module
+			'import/named': 'off',
+		},
 		settings: {
 			'import/extensions': ['.js', '.jsx', '.ts', '.cts', '.mts', '.tsx'],
 			'import/external-module-folders': ['node_modules', 'node_modules/@types'],
@@ -144,17 +148,13 @@ export const imports: FlatESLintConfigItem[] = [
 				},
 			},
 		},
-		rules: {
-			// TypeScript compilation already ensures that named imports exist in the referenced module
-			'import/named': 'off',
-		},
 	},
 	{
 		files: [GLOB_SRC],
 		// Temporary workaround for rules not supporting eslint flat config
 		rules: {
-			'import/no-deprecated': 'off',
 			'import/default': 'off',
+			'import/no-deprecated': 'off',
 			'import/no-named-as-default': 'off',
 			'import/no-named-as-default-member': 'off',
 		},
