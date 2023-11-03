@@ -140,6 +140,8 @@ export const imports: FlatESLintConfigItem[] = [
 		rules: {
 			// TypeScript compilation already ensures that named imports exist in the referenced module
 			'import/named': 'off',
+			// Prevent possible conflicts when importing types
+			'no-duplicate-imports': 'off',
 		},
 		settings: {
 			'import/extensions': ['.js', '.jsx', '.ts', '.cts', '.mts', '.tsx'],

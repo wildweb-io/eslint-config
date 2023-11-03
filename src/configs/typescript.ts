@@ -342,6 +342,7 @@ export const typescript: FlatESLintConfigItem[] = [
 				},
 			],
 			'@typescript-eslint/no-throw-literal': 'error',
+			'@typescript-eslint/no-unnecessary-condition': ['warn'],
 			'@typescript-eslint/no-unnecessary-type-assertion': ['error'],
 			'@typescript-eslint/no-unsafe-argument': ['error'],
 			'@typescript-eslint/no-unsafe-assignment': ['warn'],

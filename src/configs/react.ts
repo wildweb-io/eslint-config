@@ -29,9 +29,9 @@ export const react: FlatESLintConfigItem[] = [
 			...pluginReact.configs.all.rules,
 			...pluginReactHooks.configs.recommended.rules,
 			...pluginA11y.configs.recommended.rules,
-			'jsx-a11y/accessible-emoji': ['error'],
+			'jsx-a11y/accessible-emoji': ['warn'],
 			'jsx-a11y/alt-text': [
-				'error',
+				'warn',
 				{
 					area: [],
 					elements: ['img', 'object', 'area', 'input[type="image"]'],
@@ -40,24 +40,24 @@ export const react: FlatESLintConfigItem[] = [
 					object: [],
 				},
 			],
-			'jsx-a11y/anchor-has-content': ['error', {components: []}],
+			'jsx-a11y/anchor-has-content': ['warn', {components: []}],
 			'jsx-a11y/anchor-is-valid': [
-				'error',
+				'warn',
 				{
 					aspects: ['noHref', 'invalidHref', 'preferButton'],
 					components: ['Link'],
 					specialLink: ['to'],
 				},
 			],
-			'jsx-a11y/aria-activedescendant-has-tabindex': ['error'],
-			'jsx-a11y/aria-props': ['error'],
-			'jsx-a11y/aria-proptypes': ['error'],
-			'jsx-a11y/aria-role': ['error', {ignoreNonDOM: false}],
-			'jsx-a11y/aria-unsupported-elements': ['error'],
+			'jsx-a11y/aria-activedescendant-has-tabindex': ['warn'],
+			'jsx-a11y/aria-props': ['warn'],
+			'jsx-a11y/aria-proptypes': ['warn'],
+			'jsx-a11y/aria-role': ['warn', {ignoreNonDOM: false}],
+			'jsx-a11y/aria-unsupported-elements': ['warn'],
 			'jsx-a11y/autocomplete-valid': ['off', {inputComponents: []}],
-			'jsx-a11y/click-events-have-key-events': ['error'],
+			'jsx-a11y/click-events-have-key-events': ['warn'],
 			'jsx-a11y/control-has-associated-label': [
-				'error',
+				'warn',
 				{
 					controlComponents: [],
 					depth: 5,
@@ -85,13 +85,13 @@ export const react: FlatESLintConfigItem[] = [
 					labelAttributes: ['label'],
 				},
 			],
-			'jsx-a11y/heading-has-content': ['error', {components: ['']}],
-			'jsx-a11y/html-has-lang': ['error'],
-			'jsx-a11y/iframe-has-title': ['error'],
-			'jsx-a11y/img-redundant-alt': ['error'],
-			'jsx-a11y/interactive-supports-focus': ['error'],
+			'jsx-a11y/heading-has-content': ['warn', {components: ['']}],
+			'jsx-a11y/html-has-lang': ['warn'],
+			'jsx-a11y/iframe-has-title': ['warn'],
+			'jsx-a11y/img-redundant-alt': ['warn'],
+			'jsx-a11y/interactive-supports-focus': ['warn'],
 			'jsx-a11y/label-has-associated-control': [
-				'error',
+				'warn',
 				{
 					assert: 'both',
 					controlComponents: [],
@@ -110,28 +110,28 @@ export const react: FlatESLintConfigItem[] = [
 					},
 				},
 			],
-			'jsx-a11y/lang': ['error'],
+			'jsx-a11y/lang': ['warn'],
 			'jsx-a11y/media-has-caption': [
-				'error',
+				'warn',
 				{
 					audio: [],
 					track: [],
 					video: [],
 				},
 			],
-			'jsx-a11y/mouse-events-have-key-events': ['error'],
-			'jsx-a11y/no-access-key': ['error'],
-			'jsx-a11y/no-autofocus': ['error', {ignoreNonDOM: true}],
+			'jsx-a11y/mouse-events-have-key-events': ['warn'],
+			'jsx-a11y/no-access-key': ['warn'],
+			'jsx-a11y/no-autofocus': ['warn', {ignoreNonDOM: true}],
 			'jsx-a11y/no-distracting-elements': [
-				'error',
+				'warn',
 				{elements: ['marquee', 'blink']},
 			],
 			'jsx-a11y/no-interactive-element-to-noninteractive-role': [
-				'error',
+				'warn',
 				{tr: ['none', 'presentation']},
 			],
 			'jsx-a11y/no-noninteractive-element-interactions': [
-				'error',
+				'warn',
 				{
 					handlers: [
 						'onClick',
@@ -144,7 +144,7 @@ export const react: FlatESLintConfigItem[] = [
 				},
 			],
 			'jsx-a11y/no-noninteractive-element-to-interactive-role': [
-				'error',
+				'warn',
 				{
 					li: ['menuitem', 'option', 'row', 'tab', 'treeitem'],
 					ol: [
@@ -170,11 +170,11 @@ export const react: FlatESLintConfigItem[] = [
 				},
 			],
 			'jsx-a11y/no-noninteractive-tabindex': [
-				'error',
+				'warn',
 				{roles: ['tabpanel'], tags: []},
 			],
 			'jsx-a11y/no-onchange': ['off'],
-			'jsx-a11y/no-redundant-roles': ['error'],
+			'jsx-a11y/no-redundant-roles': ['warn'],
 			'jsx-a11y/no-static-element-interactions': [
 				'off',
 				{
@@ -188,10 +188,10 @@ export const react: FlatESLintConfigItem[] = [
 					],
 				},
 			],
-			'jsx-a11y/role-has-required-aria-props': ['error'],
-			'jsx-a11y/role-supports-aria-props': ['error'],
-			'jsx-a11y/scope': ['error'],
-			'jsx-a11y/tabindex-no-positive': ['error'],
+			'jsx-a11y/role-has-required-aria-props': ['warn'],
+			'jsx-a11y/role-supports-aria-props': ['warn'],
+			'jsx-a11y/scope': ['warn'],
+			'jsx-a11y/tabindex-no-positive': ['warn'],
 			'jsx-quotes': ['error', 'prefer-single'],
 			'react-hooks/exhaustive-deps': ['warn'],
 			'react-hooks/rules-of-hooks': ['error'],
