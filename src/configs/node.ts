@@ -20,6 +20,7 @@ export const node: FlatESLintConfigItem[] = [
 			'n/no-mixed-requires': ['error', {allowCall: true, grouping: true}],
 			'n/no-new-require': ['error'],
 			'n/no-path-concat': ['error'],
+			'n/no-process-exit': ['off'],
 			'n/no-unpublished-bin': ['error'],
 			'n/prefer-global/buffer': ['off'],
 			'n/prefer-global/console': ['error', 'always'],

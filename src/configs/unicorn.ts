@@ -11,6 +11,7 @@ export const unicorn: FlatESLintConfigItem[] = [
 	{
 		files: [GLOB_SRC],
 		rules: {
+			'no-process-exit': 'off',
 			'unicorn/better-regex': 'error',
 			'unicorn/catch-error-name': 'error',
 			'unicorn/custom-error-definition': 'error',
