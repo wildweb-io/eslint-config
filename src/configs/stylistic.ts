@@ -1,4 +1,4 @@
-import {GLOB_REACT, GLOB_SRC} from '../globs';
+import {GLOB_REACT, GLOB_SRC, GLOB_TS, GLOB_TSX} from '../globs';
 import {paddingLines} from '../lib/padding-lines';
 import {pluginStylistic} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
@@ -186,6 +186,13 @@ export const stylistic: FlatESLintConfigItem[] = [
 		},
 	},
 	{
+		files: [GLOB_TS, GLOB_TSX],
+		rules: {
+			// overwritten by typescript-eslint
+			'style/padding-line-between-statements': 'off',
+		},
+	},
+	{
 		files: [GLOB_SRC],
 		// Rules disabled by Prettier normally
 		rules: {
@@ -195,7 +202,7 @@ export const stylistic: FlatESLintConfigItem[] = [
 			'style/arrow-parens': 'off',
 			'style/arrow-spacing': 'off',
 			'style/babel/object-curly-spacing': 'off',
-			'style/babel/quotes': 0,
+			'style/babel/quotes': 'off',
 			'style/babel/semi': 'off',
 			'style/block-spacing': 'off',
 			'style/brace-style': 'off',
@@ -203,7 +210,7 @@ export const stylistic: FlatESLintConfigItem[] = [
 			'style/comma-spacing': 'off',
 			'style/comma-style': 'off',
 			'style/computed-property-spacing': 'off',
-			'style/curly': 0,
+			'style/curly': 'off',
 			'style/dot-location': 'off',
 			'style/eol-last': 'off',
 			'style/func-call-spacing': 'off',
@@ -216,23 +223,23 @@ export const stylistic: FlatESLintConfigItem[] = [
 			'style/key-spacing': 'off',
 			'style/keyword-spacing': 'off',
 			'style/linebreak-style': 'off',
-			'style/lines-around-comment': 0,
-			'style/max-len': 0,
+			'style/lines-around-comment': 'off',
+			'style/max-len': 'off',
 			'style/max-statements-per-line': 'off',
 			'style/multiline-ternary': 'off',
 			'style/new-parens': 'off',
 			'style/newline-per-chained-call': 'off',
-			'style/no-confusing-arrow': 0,
+			'style/no-confusing-arrow': 'off',
 			'style/no-extra-parens': 'off',
 			'style/no-extra-semi': 'off',
 			'style/no-floating-decimal': 'off',
-			'style/no-mixed-operators': 0,
+			'style/no-mixed-operators': 'off',
 			'style/no-mixed-spaces-and-tabs': 'off',
 			'style/no-multi-spaces': 'off',
 			'style/no-multiple-empty-lines': 'off',
-			'style/no-tabs': 0,
+			'style/no-tabs': 'off',
 			'style/no-trailing-spaces': 'off',
-			'style/no-unexpected-multiline': 0,
+			'style/no-unexpected-multiline': 'off',
 			'style/no-whitespace-before-property': 'off',
 			'style/nonblock-statement-body-position': 'off',
 			'style/object-curly-newline': 'off',
@@ -242,7 +249,7 @@ export const stylistic: FlatESLintConfigItem[] = [
 			'style/operator-linebreak': 'off',
 			'style/padded-blocks': 'off',
 			'style/quote-props': 'off',
-			'style/quotes': 0,
+			'style/quotes': 'off',
 			'style/rest-spread-spacing': 'off',
 			'style/semi': 'off',
 			'style/semi-spacing': 'off',

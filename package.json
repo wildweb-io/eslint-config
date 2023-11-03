@@ -1,6 +1,6 @@
 {
   "name": "@wildweb/eslint-config",
-  "version": "3.0.3-24",
+  "version": "3.0.3-25",
   "packageManager": "pnpm@8.10.0",
   "description": "ESLint shareable flat config used at Wild Web",
   "type": "module",
@@ -36,7 +36,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "8.52.0"
   },
   "dependencies": {
     "@graphql-eslint/eslint-plugin": "^3.20.1",
