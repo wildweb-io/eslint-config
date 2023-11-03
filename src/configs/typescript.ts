@@ -1,4 +1,3 @@
-/* eslint-disable max-lines */
 import {cwd} from 'node:process';
 import {GLOB_TS, GLOB_TSX} from '../globs';
 import {parserTypeScript, pluginAntfu, pluginTypeScript} from '../plugins';
@@ -17,13 +16,30 @@ export const typescript: FlatESLintConfigItem[] = [
 		languageOptions: {
 			parser: parserTypeScript,
 			parserOptions: {
-				sourceType: 'module',
 				ecmaVersion: 'latest',
 				project: ['./**/tsconfig.json'],
+				sourceType: 'module',
 				tsconfigRootDir: cwd(),
 			},
 		},
 		rules: {
+			'default-param-last': 'off',
+			'no-array-constructor': 'off',
+			'no-dupe-class-members': 'off',
+			'no-empty-function': 'off',
+			'no-invalid-this': 'off',
+			'no-loop-func': 'off',
+			'no-loss-of-precision': 'off',
+			'no-redeclare': 'off',
+			'no-restricted-imports': 'off',
+			'no-return-await': 'off',
+			'no-shadow': 'off',
+			'no-undef': 'off',
+			'no-unused-expressions': 'off',
+			'no-unused-vars': 'off',
+			'no-use-before-define': 'off',
+			'no-useless-constructor': 'off',
+
 			...pluginTypeScript.configs['eslint-recommended'].overrides?.[0].rules,
 			...pluginTypeScript.configs.strict.rules,
 			'@typescript-eslint/adjacent-overload-signatures': ['error'],
@@ -32,8 +48,8 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/ban-ts-comment': [
 				'error',
 				{
-					'ts-expect-error': 'allow-with-description',
 					minimumDescriptionLength: 4,
+					'ts-expect-error': 'allow-with-description',
 				},
 			],
 			'@typescript-eslint/ban-tslint-comment': ['error'],
@@ -42,49 +58,49 @@ export const typescript: FlatESLintConfigItem[] = [
 				{
 					extendDefaults: false,
 					types: {
-						String: {
-							message: 'Use `string` instead.',
-							fixWith: 'string',
-						},
-						Number: {
-							message: 'Use `number` instead.',
-							fixWith: 'number',
+						BigInt: {
+							fixWith: 'bigint',
+							message: 'Use `bigint` instead.',
 						},
 						Boolean: {
-							message: 'Use `boolean` instead.',
 							fixWith: 'boolean',
-						},
-						Symbol: {
-							message: 'Use `symbol` instead.',
-							fixWith: 'symbol',
-						},
-						BigInt: {
-							message: 'Use `bigint` instead.',
-							fixWith: 'bigint',
-						},
-						Object: {
-							message:
-								'The `Object` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead. See https://github.com/typescript-eslint/typescript-eslint/pull/848',
-							fixWith: 'Record<string, unknown>',
-						},
-						'{}': {
-							message:
-								'The `{}` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead.',
-							fixWith: 'Record<string, unknown>',
-						},
-						object: {
-							message:
-								'The `object` type is hard to use. Use `Record<string, unknown>` instead. See: https://github.com/typescript-eslint/typescript-eslint/pull/848',
-							fixWith: 'Record<string, unknown>',
+							message: 'Use `boolean` instead.',
 						},
 						Function:
 							'Use a specific function type instead, like `() => void`.',
-						'[]': "Don't use the empty array type `[]`. It only allows empty arrays. Use `SomeType[]` instead.",
+						Number: {
+							fixWith: 'number',
+							message: 'Use `number` instead.',
+						},
+						Object: {
+							fixWith: 'Record<string, unknown>',
+							message:
+								'The `Object` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead. See https://github.com/typescript-eslint/typescript-eslint/pull/848',
+						},
+						String: {
+							fixWith: 'string',
+							message: 'Use `string` instead.',
+						},
+						Symbol: {
+							fixWith: 'symbol',
+							message: 'Use `symbol` instead.',
+						},
+						'[[[[[]]]]]': '🦄💥',
+						'[[[[]]]]': 'ur drunk 🤡',
+						'[[[]]]': "Don't use `[[[]]]`. Use `SomeType[][][]` instead.",
 						'[[]]':
 							"Don't use `[[]]`. It only allows an array with a single element which is an empty array. Use `SomeType[][]` instead.",
-						'[[[]]]': "Don't use `[[[]]]`. Use `SomeType[][][]` instead.",
-						'[[[[]]]]': 'ur drunk 🤡',
-						'[[[[[]]]]]': '🦄💥',
+						'[]': "Don't use the empty array type `[]`. It only allows empty arrays. Use `SomeType[]` instead.",
+						object: {
+							fixWith: 'Record<string, unknown>',
+							message:
+								'The `object` type is hard to use. Use `Record<string, unknown>` instead. See: https://github.com/typescript-eslint/typescript-eslint/pull/848',
+						},
+						'{}': {
+							fixWith: 'Record<string, unknown>',
+							message:
+								'The `{}` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead.',
+						},
 					},
 				},
 			],
@@ -95,7 +111,7 @@ export const typescript: FlatESLintConfigItem[] = [
 			],
 			'@typescript-eslint/class-literal-property-style': ['error', 'getters'],
 			'@typescript-eslint/comma-dangle': ['off', 'always-multiline'],
-			'@typescript-eslint/comma-spacing': ['off', {before: false, after: true}],
+			'@typescript-eslint/comma-spacing': ['off', {after: true, before: false}],
 			'@typescript-eslint/consistent-generic-constructors': [
 				'error',
 				'constructor',
@@ -115,9 +131,9 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/consistent-type-imports': [
 				'error',
 				{
-					prefer: 'type-imports',
-					fixStyle: 'separate-type-imports',
 					disallowTypeAnnotations: false,
+					fixStyle: 'separate-type-imports',
+					prefer: 'type-imports',
 				},
 			],
 			'@typescript-eslint/default-param-last': ['error'],
@@ -130,13 +146,13 @@ export const typescript: FlatESLintConfigItem[] = [
 				{
 					SwitchCase: 1,
 					flatTernaryExpressions: false,
-					offsetTernaryExpressions: false,
 					ignoreComments: false,
+					offsetTernaryExpressions: false,
 				},
 			],
 			'@typescript-eslint/keyword-spacing': [
 				'off',
-				{before: true, after: true, overrides: {}},
+				{after: true, before: true, overrides: {}},
 			],
 			'@typescript-eslint/lines-between-class-members': [
 				'error',
@@ -159,7 +175,7 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/member-ordering': ['error'],
 			'@typescript-eslint/naming-convention': [
 				'warn',
-				{selector: 'function', format: ['PascalCase', 'camelCase']},
+				{format: ['PascalCase', 'camelCase'], selector: 'function'},
 			],
 			'@typescript-eslint/no-array-constructor': ['error'],
 			'@typescript-eslint/no-dupe-class-members': ['error'],
@@ -180,10 +196,10 @@ export const typescript: FlatESLintConfigItem[] = [
 				'all',
 				{
 					conditionalAssign: true,
+					enforceForArrowConditionals: false,
+					ignoreJSX: 'all',
 					nestedBinaryExpressions: false,
 					returnAssign: false,
-					ignoreJSX: 'all',
-					enforceForArrowConditionals: false,
 				},
 			],
 			'@typescript-eslint/no-extra-semi': ['off'],
@@ -206,14 +222,13 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/no-invalid-void-type': ['error'],
 			'@typescript-eslint/no-loop-func': ['error'],
 			'@typescript-eslint/no-loss-of-precision': ['error'],
-			'no-magic-numbers': ['off'],
 			'@typescript-eslint/no-magic-numbers': [
 				'off',
 				{
+					detectObjects: false,
+					enforceConst: true,
 					ignore: [],
 					ignoreArrayIndexes: true,
-					enforceConst: true,
-					detectObjects: false,
 				},
 			],
 			'@typescript-eslint/no-misused-new': ['error'],
@@ -228,7 +243,7 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/no-redeclare': ['error'],
 			'@typescript-eslint/no-redundant-type-constituents': ['off'],
 			'@typescript-eslint/no-require-imports': ['error'],
-			'@typescript-eslint/no-shadow': ['off'],
+			'@typescript-eslint/no-shadow': ['warn'],
 			'@typescript-eslint/no-this-alias': ['error', {allowDestructuring: true}],
 			'@typescript-eslint/no-unnecessary-condition': ['off'],
 			'@typescript-eslint/no-unnecessary-type-assertion': ['off'],
@@ -242,24 +257,24 @@ export const typescript: FlatESLintConfigItem[] = [
 				'error',
 				{
 					allowShortCircuit: false,
-					allowTernary: false,
 					allowTaggedTemplates: false,
+					allowTernary: false,
 					enforceForJSX: false,
 				},
 			],
 			'@typescript-eslint/no-unused-vars': [
 				'error',
 				{
-					vars: 'all',
 					args: 'after-used',
-					ignoreRestSiblings: true,
 					argsIgnorePattern: '^_',
+					ignoreRestSiblings: true,
+					vars: 'all',
 					varsIgnorePattern: '^_',
 				},
 			],
 			'@typescript-eslint/no-use-before-define': [
 				'error',
-				{functions: true, classes: true, variables: true},
+				{classes: true, functions: true, variables: true},
 			],
 			'@typescript-eslint/no-useless-constructor': ['error'],
 			'@typescript-eslint/no-useless-empty-export': ['error'],
@@ -286,13 +301,13 @@ export const typescript: FlatESLintConfigItem[] = [
 			'@typescript-eslint/space-before-blocks': ['off', 'always'],
 			'@typescript-eslint/space-before-function-paren': [
 				'off',
-				{anonymous: 'always', named: 'never', asyncArrow: 'always'},
+				{anonymous: 'always', asyncArrow: 'always', named: 'never'},
 			],
 			'@typescript-eslint/space-infix-ops': ['off'],
 			'@typescript-eslint/strict-boolean-expressions': ['off'],
 			'@typescript-eslint/triple-slash-reference': [
 				'warn',
-				{path: 'never', types: 'never', lib: 'never'},
+				{lib: 'never', path: 'never', types: 'never'},
 			],
 			'@typescript-eslint/type-annotation-spacing': ['off'],
 			'@typescript-eslint/typedef': ['off'],
@@ -301,68 +316,22 @@ export const typescript: FlatESLintConfigItem[] = [
 				'error',
 				{ignoreDifferentlyNamedParameters: true},
 			],
+			'no-magic-numbers': ['off'],
 		},
 	},
 	{
 		files: [GLOB_TS, GLOB_TSX],
 		rules: {
-			'brace-style': 'off',
-			'comma-dangle': 'off',
-			'comma-spacing': 'off',
-			'default-param-last': 'off',
-			'dot-notation': 'off',
-			'func-call-spacing': 'off',
-			indent: 'off',
-			'keyword-spacing': 'off',
-			'no-array-constructor': 'off',
-			'no-dupe-class-members': 'off',
-			'no-duplicate-imports': 'off',
-			'no-empty-function': 'off',
-			'no-extra-parens': 'off',
-			'no-extra-semi': 'off',
-			'no-implied-eval': 'off',
-			'no-invalid-this': 'off',
-			'no-loop-func': 'off',
-			'no-loss-of-precision': 'off',
-			'no-redeclare': 'off',
-			'no-restricted-imports': 'off',
-			'no-return-await': 'off',
-			'no-shadow': 'off',
-			'no-throw-literal': 'off',
-			// https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-			'no-undef': 'off',
-			'no-unused-expressions': 'off',
-			'no-unused-vars': 'off',
-			'no-use-before-define': 'off',
-			'no-useless-constructor': 'off',
-			'object-curly-spacing': 'off',
-			'padding-line-between-statements': 'off',
-			quotes: 'off',
-			'require-await': 'off',
-			semi: 'off',
-			'space-before-function-paren': 'off',
-			'space-infix-ops': 'off',
-			// Adds support for triple-slash directives.
-			'spaced-comment': [
-				'error',
-				'always',
-				{
-					markers: ['/'],
-				},
-			],
-		},
-	},
-	{
-		files: [GLOB_TS, GLOB_TSX],
-		rules: {
+			...pluginTypeScript.configs['strict-type-checked'].rules,
 			'@typescript-eslint/await-thenable': ['error'],
+			'@typescript-eslint/dot-notation': ['error', {allowKeywords: true}],
+			'@typescript-eslint/no-explicit-any': 'off',
 			'@typescript-eslint/no-floating-promises': [
 				'error',
-				{ignoreVoid: true, ignoreIIFE: true},
+				{ignoreIIFE: true, ignoreVoid: true},
 			],
-			'@typescript-eslint/no-for-in-array': ['off'],
-			'no-implied-eval': ['off'],
-			'@typescript-eslint/no-implied-eval': ['error'],
+			'@typescript-eslint/no-for-in-array': 'error',
+			'@typescript-eslint/no-implied-eval': 'error',
 			'@typescript-eslint/no-misused-promises': [
 				'error',
 				{
@@ -372,13 +341,13 @@ export const typescript: FlatESLintConfigItem[] = [
 					},
 				},
 			],
+			'@typescript-eslint/no-throw-literal': 'error',
 			'@typescript-eslint/no-unnecessary-type-assertion': ['error'],
 			'@typescript-eslint/no-unsafe-argument': ['error'],
 			'@typescript-eslint/no-unsafe-assignment': ['warn'],
 			'@typescript-eslint/no-unsafe-call': ['warn'],
 			'@typescript-eslint/no-unsafe-member-access': ['warn'],
 			'@typescript-eslint/no-unsafe-return': ['warn'],
-			'require-await': ['off'],
 			'@typescript-eslint/require-await': ['error'],
 			'@typescript-eslint/restrict-plus-operands': ['error'],
 			'@typescript-eslint/restrict-template-expressions': [
@@ -386,6 +355,19 @@ export const typescript: FlatESLintConfigItem[] = [
 				{allowNumber: true},
 			],
 			'@typescript-eslint/unbound-method': ['error'],
+			'dot-notation': 'off',
+			'no-implied-eval': 'off',
+			'no-throw-literal': 'off',
+			'require-await': ['off'],
+
+			// Adds support for triple-slash directives.
+			'spaced-comment': [
+				'error',
+				'always',
+				{
+					markers: ['/'],
+				},
+			],
 		},
 	},
 	{
