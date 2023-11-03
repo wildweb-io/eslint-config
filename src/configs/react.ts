@@ -6,12 +6,14 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const react: FlatESLintConfigItem[] = [
 	{
-		files: [GLOB_REACT],
 		plugins: {
 			react: pluginReact,
 			'react-hooks': pluginReactHooks,
 			'jsx-a11y': pluginA11y,
 		},
+	},
+	{
+		files: [GLOB_REACT],
 		languageOptions: {
 			...pluginReact.configs.recommended.languageOptions,
 			parserOptions: {

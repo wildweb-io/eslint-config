@@ -4,12 +4,14 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const graphql: FlatESLintConfigItem[] = [
 	{
+		plugins: {
+			'@graphql-eslint': pluginGraphql,
+		},
+	},
+	{
 		files: [GLOB_GRAPHQL],
 		languageOptions: {
 			parser: pluginGraphql,
-		},
-		plugins: {
-			'@graphql-eslint': pluginGraphql,
 		},
 		rules: {
 			'@graphql-eslint/alphabetize': [

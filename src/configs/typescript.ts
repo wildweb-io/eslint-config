@@ -7,22 +7,21 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const typescript: FlatESLintConfigItem[] = [
 	{
+		plugins: {
+			'@typescript-eslint': pluginTypeScript,
+			antfu: pluginAntfu,
+		},
+	},
+	{
 		files: [GLOB_TS, GLOB_TSX],
 		languageOptions: {
 			parser: parserTypeScript,
 			parserOptions: {
 				sourceType: 'module',
-				ion: 'latest',
+				ecmaVersion: 'latest',
 				project: ['./**/tsconfig.json'],
 				tsconfigRootDir: cwd(),
 			},
-		},
-		settings: {
-			reportUnusedDisableDirectives: true,
-		},
-		plugins: {
-			'@typescript-eslint': pluginTypeScript,
-			antfu: pluginAntfu,
 		},
 		rules: {
 			...pluginTypeScript.configs['eslint-recommended'].overrides?.[0].rules,

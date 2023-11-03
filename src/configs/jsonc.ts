@@ -4,13 +4,16 @@ import type {FlatESLintConfigItem, Rules} from 'eslint-define-config';
 
 export const jsonc: FlatESLintConfigItem[] = [
 	{
+		plugins: {
+			jsonc: pluginJsonc,
+		},
+	},
+	{
 		files: [GLOB_JSON, GLOB_JSON5, GLOB_JSONC],
 		languageOptions: {
 			parser: parserJsonc,
 		},
-		plugins: {
-			jsonc: pluginJsonc,
-		},
+
 		rules: {
 			...(pluginJsonc.configs['recommended-with-jsonc'].rules as Rules),
 			'strict': 'off',
@@ -38,11 +41,17 @@ export const jsonc: FlatESLintConfigItem[] = [
 			'jsonc/no-undefined-value': 'error',
 			'jsonc/no-unicode-codepoint-escapes': 'error',
 			'jsonc/no-useless-escape': 'error',
-			'jsonc/object-curly-newline': 'error',
-			'jsonc/object-curly-spacing': 'error',
-			'jsonc/object-property-newline': 'error',
-			'jsonc/quote-props': 'off',
-			'jsonc/quotes': 'off',
+			'jsonc/object-curly-newline': [
+				'error',
+				{consistent: true, multiline: true},
+			],
+			'jsonc/object-curly-spacing': ['error', 'always'],
+			'jsonc/object-property-newline': [
+				'error',
+				{allowMultiplePropertiesPerLine: true},
+			],
+			'jsonc/quote-props': 'error',
+			'jsonc/quotes': 'error',
 			'jsonc/sort-keys': [
 				'error',
 				'asc',
@@ -51,6 +60,11 @@ export const jsonc: FlatESLintConfigItem[] = [
 			'jsonc/space-unary-ops': 'error',
 			'jsonc/valid-json-number': 'error',
 			'jsonc/vue-custom-block/no-parsing-error': 'error',
+			'jsonc/array-bracket-spacing': ['error', 'never'],
+			'jsonc/comma-dangle': ['error', 'never'],
+			'jsonc/comma-style': ['error', 'last'],
+			'jsonc/indent': ['error', 2],
+			'jsonc/key-spacing': ['error', {afterColon: true, beforeColon: false}],
 		},
 	},
 	{

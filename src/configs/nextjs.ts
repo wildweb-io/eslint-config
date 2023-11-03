@@ -4,10 +4,12 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const nextjs: FlatESLintConfigItem[] = [
 	{
-		files: [GLOB_SRC],
 		plugins: {
 			'@next/next': pluginNextjs,
 		},
+	},
+	{
+		files: [GLOB_SRC],
 		settings: {
 			react: {
 				version: 'detect',

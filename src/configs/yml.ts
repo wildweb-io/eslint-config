@@ -4,12 +4,14 @@ import type {FlatESLintConfigItem, Rules} from 'eslint-define-config';
 
 export const yml: FlatESLintConfigItem[] = [
 	{
+		plugins: {
+			yml: pluginYml,
+		},
+	},
+	{
 		files: [GLOB_YAML],
 		languageOptions: {
 			parser: parserYml,
-		},
-		plugins: {
-			yml: pluginYml,
 		},
 		rules: {
 			...(pluginYml.configs.standard.rules as Rules),

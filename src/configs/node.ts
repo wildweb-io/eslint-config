@@ -3,6 +3,11 @@ import {pluginNode} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const node: FlatESLintConfigItem[] = [
+	{
+		plugins: {
+			n: pluginNode,
+		},
+	},
 	pluginNode.configs['flat/recommended'],
 	{
 		files: [GLOB_SRC],

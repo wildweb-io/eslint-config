@@ -4,10 +4,12 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const promise: FlatESLintConfigItem[] = [
 	{
-		files: [GLOB_SRC],
 		plugins: {
 			promise: pluginPromise,
 		},
+	},
+	{
+		files: [GLOB_SRC],
 		rules: {
 			...pluginPromise.configs.recommended.rules,
 			'promise/always-return': ['error', {ignoreLastCallback: true}],

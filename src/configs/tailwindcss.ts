@@ -4,6 +4,11 @@ import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const tailwindcss: FlatESLintConfigItem[] = [
 	{
+		plugins: {
+			tailwindcss: pluginTailwindcss,
+		},
+	},
+	{
 		files: [GLOB_SRC, GLOB_HTML],
 		settings: {
 			tailwindcss: {
@@ -11,9 +16,6 @@ export const tailwindcss: FlatESLintConfigItem[] = [
 				config: 'tailwind.config.ts',
 				removeDuplicates: true,
 			},
-		},
-		plugins: {
-			tailwindcss: pluginTailwindcss,
 		},
 		rules: {
 			'tailwindcss/classnames-order': ['warn'],

@@ -3,6 +3,7 @@ import globals from 'globals';
 import {pluginUnusedImports} from '../plugins';
 import {isInEditor} from '../env';
 import {paddingLines} from '../lib/padding-lines';
+import {GLOB_SRC} from '../globs';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 const MAX_COMPLEXITY = 20;
@@ -16,22 +17,33 @@ const MAX_STATEMENTS = 30;
 
 export const javascript: FlatESLintConfigItem[] = [
 	{
+		plugins: {
+			'unused-imports': pluginUnusedImports,
+		},
+	},
+	{
+		files: [GLOB_SRC],
 		languageOptions: {
+			ecmaVersion: 'latest',
 			globals: {
 				...globals.browser,
 				...globals.es2021,
 				...globals.node,
+				document: 'readonly',
+				navigator: 'readonly',
+				window: 'readonly',
 			},
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
 				},
+				ecmaVersion: 'latest',
 				sourceType: 'module',
 			},
 			sourceType: 'module',
 		},
-		plugins: {
-			'unused-imports': pluginUnusedImports,
+		linterOptions: {
+			reportUnusedDisableDirectives: true,
 		},
 		rules: {
 			'block-scoped-var': 'error',

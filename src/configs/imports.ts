@@ -10,12 +10,17 @@ export const imports: FlatESLintConfigItem[] = [
 		},
 		rules: {
 			'antfu/import-dedupe': 'error',
+			'antfu/no-import-node-modules-by-path': 'error',
+
 			'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
 			'import/default': ['error'],
 			'import/export': ['error'],
 			'import/first': 'error',
 			'import/named': ['error'],
-			'import/newline-after-import': ['error'],
+			'import/newline-after-import': [
+				'error',
+				{considerComments: true, count: 1},
+			],
 			'import/no-absolute-path': [
 				'error',
 				{amd: false, commonjs: true, esmodule: true},

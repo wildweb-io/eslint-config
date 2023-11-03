@@ -1,3 +1,4 @@
+import {GLOB_SRC} from '../globs';
 import {pluginUnicorn} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
@@ -6,6 +7,9 @@ export const unicorn: FlatESLintConfigItem[] = [
 		plugins: {
 			unicorn: pluginUnicorn,
 		},
+	},
+	{
+		files: [GLOB_SRC],
 		rules: {
 			'unicorn/better-regex': 'error',
 			'unicorn/catch-error-name': 'error',
