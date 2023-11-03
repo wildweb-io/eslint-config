@@ -1,6 +1,5 @@
 import {
 	comments,
-	graphql,
 	ignores,
 	imports,
 	javascript,
@@ -31,7 +30,6 @@ export const basic = [
 	...markdown,
 	...yml,
 	...jsonc,
-	...graphql,
 	...stylistic,
 ];
 

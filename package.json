@@ -1,6 +1,6 @@
 {
   "name": "@wildweb/eslint-config",
-  "version": "3.0.3-25",
+  "version": "3.0.3-26",
   "packageManager": "pnpm@8.10.0",
   "description": "ESLint shareable flat config used at Wild Web",
   "type": "module",
@@ -39,7 +39,6 @@
     "eslint": "8.52.0"
   },
   "dependencies": {
-    "@graphql-eslint/eslint-plugin": "^3.20.1",
     "@next/eslint-plugin-next": "^14.0.1",
     "@stylistic/eslint-plugin": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^6.9.1",

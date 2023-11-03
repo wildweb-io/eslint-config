@@ -1,17 +1,17 @@
 import {GLOB_GRAPHQL} from '../globs';
-import {pluginGraphql} from '../plugins';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const graphql: FlatESLintConfigItem[] = [
 	{
+		files: [GLOB_GRAPHQL],
 		plugins: {
-			'@graphql-eslint': pluginGraphql,
+			// '@graphql-eslint': pluginGraphql,
 		},
 	},
 	{
 		files: [GLOB_GRAPHQL],
 		languageOptions: {
-			parser: pluginGraphql,
+			// parser: pluginGraphql,
 		},
 		rules: {
 			'@graphql-eslint/alphabetize': [
