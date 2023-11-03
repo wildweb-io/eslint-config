@@ -345,7 +345,8 @@ export const typescript: FlatESLintConfigItem[] = [
 				},
 			],
 			'@typescript-eslint/no-throw-literal': 'error',
-			'@typescript-eslint/no-unnecessary-condition': ['warn'],
+			// TODO: Currently disabled but should be enabled in the future.
+			'@typescript-eslint/no-unnecessary-condition': ['off'],
 			'@typescript-eslint/no-unnecessary-type-assertion': ['error'],
 			'@typescript-eslint/no-unsafe-argument': ['error'],
 			'@typescript-eslint/no-unsafe-assignment': ['warn'],
