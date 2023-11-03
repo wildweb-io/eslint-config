@@ -1,5 +1,13 @@
 import {pluginAntfu, pluginImport} from '../plugins';
-import {GLOB_MARKDOWN, GLOB_SRC, GLOB_SRC_EXT} from '../globs';
+import {
+	GLOB_JS,
+	GLOB_JSX,
+	GLOB_MARKDOWN,
+	GLOB_SRC,
+	GLOB_SRC_EXT,
+	GLOB_TS,
+	GLOB_TSX,
+} from '../globs';
 import type {FlatESLintConfigItem} from 'eslint-define-config';
 
 export const imports: FlatESLintConfigItem[] = [
@@ -8,6 +16,9 @@ export const imports: FlatESLintConfigItem[] = [
 			antfu: pluginAntfu,
 			import: pluginImport,
 		},
+	},
+	{
+		files: [GLOB_SRC],
 		rules: {
 			'antfu/import-dedupe': 'error',
 			'antfu/no-import-node-modules-by-path': 'error',
@@ -39,6 +50,7 @@ export const imports: FlatESLintConfigItem[] = [
 			],
 			'import/no-cycle': ['error'],
 			'import/no-default-export': 'error',
+			'import/no-deprecated': 'warn',
 			'import/no-duplicates': 'error',
 			'import/no-import-module-exports': ['error', {exceptions: []}],
 			'import/no-mutable-exports': 'error',
@@ -63,12 +75,7 @@ export const imports: FlatESLintConfigItem[] = [
 					],
 				},
 			],
-			'import/no-useless-path-segments': [
-				'error',
-				{
-					commonjs: true,
-				},
-			],
+			'import/no-useless-path-segments': ['error', {commonjs: true}],
 			'import/no-webpack-loader-syntax': 'error',
 			'import/order': [
 				'error',
@@ -99,11 +106,47 @@ export const imports: FlatESLintConfigItem[] = [
 			'**/*.d.ts',
 			`${GLOB_MARKDOWN}/**`,
 		],
-		plugins: {
-			import: pluginImport,
-		},
 		rules: {
 			'import/no-default-export': 'off',
+		},
+	},
+	{
+		files: [GLOB_SRC],
+		languageOptions: {
+			parserOptions: {
+				ecmaVersion: 'latest',
+				sourceType: 'module',
+			},
+		},
+	},
+	{
+		files: [GLOB_JS, GLOB_JSX],
+		settings: {
+			'import/extensions': ['.js', '.jsx'],
+		},
+		languageOptions: {
+			parserOptions: {
+				ecmaFeatures: {jsx: true},
+			},
+		},
+	},
+	{
+		files: [GLOB_TS, GLOB_TSX],
+		settings: {
+			'import/extensions': ['.js', '.jsx', '.ts', '.cts', '.mts', '.tsx'],
+			'import/external-module-folders': ['node_modules', 'node_modules/@types'],
+			'import/parsers': {
+				'@typescript-eslint/parser': ['.ts', '.cts', '.mts', '.tsx'],
+			},
+			'import/resolver': {
+				node: {
+					extensions: ['.js', '.jsx', '.ts', '.cts', '.mts', '.tsx'],
+				},
+			},
+		},
+		rules: {
+			// TypeScript compilation already ensures that named imports exist in the referenced module
+			'import/named': 'off',
 		},
 	},
 ];

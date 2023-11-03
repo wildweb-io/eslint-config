@@ -45,7 +45,7 @@ export const jsonc: FlatESLintConfigItem[] = [
 				'error',
 				{consistent: true, multiline: true},
 			],
-			'jsonc/object-curly-spacing': ['error', 'always'],
+			'jsonc/object-curly-spacing': ['error', 'never'],
 			'jsonc/object-property-newline': [
 				'error',
 				{allowMultiplePropertiesPerLine: true},
