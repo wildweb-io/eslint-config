@@ -27,4 +27,11 @@ export const tailwindcss: FlatESLintConfigItem[] = [
 			},
 		},
 	},
+	{
+		files: ['**/tailwind.config.?([cm])[jt]s'],
+		rules: {
+			'sort-keys': 'off',
+			'sort-keys/sort-keys-fix': 'off',
+		},
+	},
 ];

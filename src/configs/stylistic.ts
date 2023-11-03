@@ -18,7 +18,8 @@ export const stylistic: FlatESLintConfigItem[] = [
 			'style/arrow-spacing': ['error', {after: true, before: true}],
 			'style/block-spacing': ['error', 'never'],
 			'style/brace-style': ['error', '1tbs', {allowSingleLine: true}],
-			'style/comma-dangle': ['error', 'always-multiline'],
+			// handled by typescript-eslint
+			'style/comma-dangle': ['off', 'always-multiline'],
 			'style/comma-spacing': ['error', {after: true, before: false}],
 			'style/comma-style': ['error', 'last'],
 			'style/computed-property-spacing': [
@@ -38,7 +39,7 @@ export const stylistic: FlatESLintConfigItem[] = [
 			],
 			'style/max-statements-per-line': ['error', {max: 1}],
 			'style/member-delimiter-style': ['error'],
-			'style/multiline-ternary': ['error', 'always-multiline'],
+			'style/multiline-ternary': ['off', 'always-multiline'],
 			'style/new-parens': 'error',
 			'style/no-extra-parens': ['error', 'functions'],
 			'style/no-floating-decimal': 'error',
@@ -116,13 +117,13 @@ export const stylistic: FlatESLintConfigItem[] = [
 	{
 		files: [GLOB_REACT],
 		rules: {
-			'style/jsx-closing-bracket-location': 'error',
-			'style/jsx-closing-tag-location': 'error',
+			'style/jsx-closing-bracket-location': 'off',
+			'style/jsx-closing-tag-location': 'off',
 			'style/jsx-curly-brace-presence': [
 				'error',
 				{propElementValues: 'always'},
 			],
-			'style/jsx-curly-newline': 'error',
+			'style/jsx-curly-newline': 'off',
 			'style/jsx-curly-spacing': ['error', 'never'],
 			'style/jsx-equals-spacing': 'error',
 			'style/jsx-first-prop-new-line': 'error',
@@ -136,8 +137,8 @@ export const stylistic: FlatESLintConfigItem[] = [
 				'error',
 				{maximum: 1, when: 'multiline'},
 			],
-			'style/jsx-one-expression-per-line': ['error', {allow: 'single-child'}],
-			'style/jsx-quotes': 'error',
+			'style/jsx-one-expression-per-line': ['off', {allow: 'single-child'}],
+			'style/jsx-quotes': ['error', 'prefer-single'],
 			'style/jsx-tag-spacing': [
 				'error',
 				{
@@ -148,7 +149,7 @@ export const stylistic: FlatESLintConfigItem[] = [
 				},
 			],
 			'style/jsx-wrap-multilines': [
-				'error',
+				'off',
 				{
 					arrow: 'parens-new-line',
 					assignment: 'parens-new-line',

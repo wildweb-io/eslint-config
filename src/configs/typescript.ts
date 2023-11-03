@@ -110,8 +110,11 @@ export const typescript: FlatESLintConfigItem[] = [
 				{allowSingleLine: false},
 			],
 			'@typescript-eslint/class-literal-property-style': ['error', 'getters'],
-			'@typescript-eslint/comma-dangle': ['off', 'always-multiline'],
-			'@typescript-eslint/comma-spacing': ['off', {after: true, before: false}],
+			'@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+			'@typescript-eslint/comma-spacing': [
+				'error',
+				{after: true, before: false},
+			],
 			'@typescript-eslint/consistent-generic-constructors': [
 				'error',
 				'constructor',
