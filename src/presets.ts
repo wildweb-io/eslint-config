@@ -14,6 +14,7 @@ import {
 	stylistic,
 	tailwindcss,
 	typescript,
+	typescriptTypecheck,
 	unicorn,
 	yml,
 } from './configs';
@@ -36,7 +37,7 @@ export const basic = [
 
 export const all = [
 	...basic,
-	...(hasTypeScript ? typescript : []),
+	...(hasTypeScript ? [...typescript, ...typescriptTypecheck] : []),
 	...(hasReact ? react : []),
 	...(hasNextjs ? nextjs : []),
 	...(hasTailwindcss ? tailwindcss : []),
@@ -50,6 +51,7 @@ export const wildweb = (
 		prettier: enablePrettier = true,
 		sortKeys: enableSortKeys = true,
 		typescript: enableTypescript = hasTypeScript,
+		typescriptTypecheck: enableTypescriptTypecheck = true,
 		react: enableReact = hasReact,
 		nextjs: enableNextjs = hasNextjs,
 		tailwindcss: enableTailwindcss = hasTailwindcss,
@@ -57,6 +59,7 @@ export const wildweb = (
 		prettier: boolean;
 		sortKeys: boolean;
 		typescript: boolean;
+		typescriptTypecheck: boolean;
 		react: boolean;
 		nextjs: boolean;
 		tailwindcss: boolean;
@@ -68,6 +71,10 @@ export const wildweb = (
 
 	if (enableTypescript) {
 		configs.push(...typescript);
+	}
+
+	if (enableTypescriptTypecheck) {
+		configs.push(...typescriptTypecheck);
 	}
 
 	if (enableReact) {

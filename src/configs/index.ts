@@ -8,7 +8,7 @@ export {markdown} from './markdown';
 export {node} from './node';
 export {prettier} from './prettier';
 export {sortKeys} from './sort-keys';
-export {typescript} from './typescript';
+export {typescript, typescriptTypecheck} from './typescript';
 export {unicorn} from './unicorn';
 export {yml} from './yml';
 export {react} from './react';

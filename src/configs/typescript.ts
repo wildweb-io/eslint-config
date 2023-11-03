@@ -323,6 +323,30 @@ export const typescript: FlatESLintConfigItem[] = [
 		},
 	},
 	{
+		files: ['**/*.d.ts'],
+		rules: {
+			'eslint-comments/no-unlimited-disable': 'off',
+			'import/no-duplicates': 'off',
+			'unused-imports/no-unused-vars': 'off',
+		},
+	},
+	{
+		files: ['**/*.{test,spec}.ts?(x)'],
+		rules: {
+			'no-unused-expressions': 'off',
+		},
+	},
+	{
+		files: ['**/*.js', '**/*.cjs'],
+		rules: {
+			'@typescript-eslint/no-require-imports': 'off',
+			'@typescript-eslint/no-var-requires': 'off',
+		},
+	},
+];
+
+export const typescriptTypecheck: FlatESLintConfigItem[] = [
+	{
 		files: [GLOB_TS, GLOB_TSX],
 		rules: {
 			...pluginTypeScript.configs['strict-type-checked'].rules,
@@ -373,27 +397,6 @@ export const typescript: FlatESLintConfigItem[] = [
 					markers: ['/'],
 				},
 			],
-		},
-	},
-	{
-		files: ['**/*.d.ts'],
-		rules: {
-			'eslint-comments/no-unlimited-disable': 'off',
-			'import/no-duplicates': 'off',
-			'unused-imports/no-unused-vars': 'off',
-		},
-	},
-	{
-		files: ['**/*.{test,spec}.ts?(x)'],
-		rules: {
-			'no-unused-expressions': 'off',
-		},
-	},
-	{
-		files: ['**/*.js', '**/*.cjs'],
-		rules: {
-			'@typescript-eslint/no-require-imports': 'off',
-			'@typescript-eslint/no-var-requires': 'off',
 		},
 	},
 ];

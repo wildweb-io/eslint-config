@@ -1,8 +1,8 @@
 {
   "name": "@wildweb/eslint-config",
-  "version": "3.0.3-22",
+  "version": "3.0.3-24",
   "packageManager": "pnpm@8.10.0",
-  "description": "ESLint shareable configs used at Wild Web",
+  "description": "ESLint shareable flat config used at Wild Web",
   "type": "module",
   "keywords": [
     "eslint",
