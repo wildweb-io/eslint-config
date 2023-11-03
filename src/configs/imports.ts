@@ -127,7 +127,12 @@ export const imports: FlatESLintConfigItem[] = [
 			},
 		},
 		settings: {
-			'import/extensions': ['.js', '.jsx'],
+			'import/extensions': ['.js', '.mjs', '.cjs', '.jsx'],
+			'import/resolver': {
+				node: {
+					extensions: ['.js', '.mjs', '.cjs', '.jsx', '.json'],
+				},
+			},
 		},
 	},
 	{
@@ -144,7 +149,17 @@ export const imports: FlatESLintConfigItem[] = [
 			},
 			'import/resolver': {
 				node: {
-					extensions: ['.js', '.jsx', '.ts', '.cts', '.mts', '.tsx'],
+					extensions: [
+						'.js',
+						'.mjs',
+						'.cjs',
+						'.jsx',
+						'.ts',
+						'.cts',
+						'.mts',
+						'.tsx',
+						'.json',
+					],
 				},
 			},
 		},
