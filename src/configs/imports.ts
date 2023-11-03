@@ -149,4 +149,14 @@ export const imports: FlatESLintConfigItem[] = [
 			'import/named': 'off',
 		},
 	},
+	{
+		files: [GLOB_SRC],
+		// Temporary workaround for rules not supporting eslint flat config
+		rules: {
+			'import/no-deprecated': 'off',
+			'import/default': 'off',
+			'import/no-named-as-default': 'off',
+			'import/no-named-as-default-member': 'off',
+		},
+	},
 ];
